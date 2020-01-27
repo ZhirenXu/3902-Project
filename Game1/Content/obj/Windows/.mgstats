@@ -1,0 +1,4 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/MichaelWindows/source/repos/Game1/Game1/Content/font.spritefont","C:/Users/MichaelWindows/source/repos/Game1/Game1/Content/bin/Windows/font.xnb","FontDescriptionProcessor","SpriteFontContent",2008,21521,0.2879975
+"C:/Users/MichaelWindows/source/repos/Game1/Game1/Content/luigi.png","C:/Users/MichaelWindows/source/repos/Game1/Game1/Content/bin/Windows/luigi.xnb","TextureProcessor","Texture2DContent",6625,304645,0.3594146
+"C:/Users/MichaelWindows/source/repos/Game1/Game1/Content/Text.png","C:/Users/MichaelWindows/source/repos/Game1/Game1/Content/bin/Windows/Text.xnb","TextureProcessor","Texture2DContent",8101,1527061,0.3825745
