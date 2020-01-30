@@ -1,5 +1,5 @@
 *.lock
-*.vs
+.vs
 *_i.c
 *_p.c
 *_h.h
@@ -27,3 +27,4 @@
 *.pidb
 *.svclog
 *.scc
+*.suo
