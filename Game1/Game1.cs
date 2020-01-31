@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
-/*Authors: Mike Belair, */
+/*Authors: Mike Belair, Chase Armstrong*/
 namespace Game1
 {
     public class Game1 : Game
