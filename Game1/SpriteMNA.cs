@@ -8,7 +8,7 @@ namespace Game1
     {
         Game1 myGame;
         private Texture2D texture;
-        public SpriteMNA(Game1 game)
+        public SpriteMNA(Game1 game) /*This will probably be passed a Player or State object instead*/
         {
             texture = game.luigi;
             myGame = game;
