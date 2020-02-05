@@ -7,7 +7,9 @@ namespace Game1 {
     {
         void setPosition(int x, int y);
         Vector2 getPosition();
-        void changeState(IPlayerState state); /*Waiting for player state interface*/
+        void changeState(IPlayerState state);
+
+        IPlayerState getState();
 
     }
 }

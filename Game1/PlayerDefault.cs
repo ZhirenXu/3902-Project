@@ -31,5 +31,12 @@ namespace Game1
 			this.state = state;
 		}
 
+		public IPlayerState getState()
+		{
+			return this.state;
+		}
+
+
+
 	}
 }

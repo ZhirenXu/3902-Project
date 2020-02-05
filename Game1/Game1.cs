@@ -11,6 +11,7 @@ namespace Game1
         SpriteBatch spriteBatch;
         SpriteFont text;
         List<IController> controllers;
+        IPlayer player;
 
         public Game1()
         {
@@ -21,6 +22,7 @@ namespace Game1
  
         protected override void Initialize()
         {
+            /*player = new PlayerDefault(0, 0,); Waiting for states*/
             controllers = new List<IController>();
             controllers.Add(new KeyboardController(this));
             controllers.Add(new MouseController(this));

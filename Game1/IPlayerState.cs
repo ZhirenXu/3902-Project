@@ -8,6 +8,10 @@ namespace Game1
 {
     public interface IPlayerState
     {
+        void UpArrow();
+        void DownArrow();
+        void LeftArrow();
+        void RightArrow();
 
     }
 }
