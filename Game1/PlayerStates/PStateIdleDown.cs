@@ -37,6 +37,11 @@ namespace Game1.PlayerStates
 
         }
 
+        public void Stop()
+        {
+
+        }
+
         public void Update()
         {
             sprite.Update();

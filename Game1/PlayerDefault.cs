@@ -61,6 +61,11 @@ namespace Game1
 			state.Attack();
 		}
 
+		public void Stop()
+		{
+			state.Stop();
+		}
+
 		public void Update()
 		{
 			state.Update();

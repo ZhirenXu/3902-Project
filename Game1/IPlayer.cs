@@ -15,6 +15,7 @@ namespace Game1 {
         void MoveLeft();
         void MoveRight();
         void Attack();
+        void Stop();
         void Update();
         void Draw(SpriteBatch spriteBatch);
 
