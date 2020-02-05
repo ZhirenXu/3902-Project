@@ -43,15 +43,15 @@
   <ItemGroup>
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
+    <Compile Include="IPlayerState.cs" />
+    <Compile Include="IPlayer.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="MouseController.cs" />
     <Compile Include="keyboardController.cs" />
+    <Compile Include="PlayerDefault.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpriteMA.cs" />
-    <Compile Include="SpriteNMA.cs" />
     <Compile Include="SpriteMNA.cs" />
-    <Compile Include="SpriteNMNA.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
