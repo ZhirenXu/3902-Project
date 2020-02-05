@@ -48,6 +48,7 @@ namespace Game1
             {
                 controller.Update();
             }
+            player.Update();
 
             base.Update(gameTime);
         }
@@ -55,7 +56,7 @@ namespace Game1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            player.Draw(spriteBatch);
             base.Draw(gameTime);
         }
     }

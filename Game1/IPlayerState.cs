@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
     public interface IPlayerState
     {
-        void UpArrow();
-        void DownArrow();
-        void LeftArrow();
-        void RightArrow();
+        void MoveUp();
+        void MoveDown();
+        void MoveLeft();
+        void MoveRight();
 
+        void Attack();
+        void Update();
+        void Draw(SpriteBatch spriteBatch);
     }
 }

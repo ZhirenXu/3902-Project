@@ -5,11 +5,18 @@ using Microsoft.Xna.Framework.Input;
 namespace Game1 {
     public interface IPlayer
     {
-        void setPosition(int x, int y);
-        Vector2 getPosition();
-        void changeState(IPlayerState state);
+        void SetPosition(int x, int y);
+        Vector2 GetPosition();
+        void SetState(IPlayerState state);
 
-        IPlayerState getState();
+        IPlayerState GetState();
+        void MoveUp();
+        void MoveDown();
+        void MoveLeft();
+        void MoveRight();
+        void Attack();
+        void Update();
+        void Draw(SpriteBatch spriteBatch);
 
     }
 }

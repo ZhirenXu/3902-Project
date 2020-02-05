@@ -15,27 +15,61 @@ namespace Game1
 			this.state = state;
 		}
 
-		public void setPosition(int x, int y)
+		public void SetPosition(int x, int y)
 		{
 			this.position.X = x;
 			this.position.Y = y;
 		}
 
-		public Vector2 getPosition()
+		public Vector2 GetPosition()
 		{
 			return this.position;
 		}
 
-		public void changeState(IPlayerState state)
+		public void SetState(IPlayerState state)
 		{
 			this.state = state;
 		}
 
-		public IPlayerState getState()
+		public IPlayerState GetState()
 		{
 			return this.state;
 		}
 
+		public void MoveUp()
+		{
+			state.MoveUp();
+		}
+
+		public void MoveDown()
+		{
+			state.MoveDown();
+		}
+
+		public void MoveLeft()
+		{
+			state.MoveLeft();
+		}
+
+		public void MoveRight()
+		{
+			state.MoveRight();
+		}
+
+		public void Attack()
+		{
+			state.Attack();
+		}
+
+		public void Update()
+		{
+			state.Update();
+		}
+
+		public void Draw(SpriteBatch spriteBatch)
+		{
+			state.Draw(spriteBatch);
+		}
 
 
 	}

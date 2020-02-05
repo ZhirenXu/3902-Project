@@ -49,6 +49,7 @@
     <Compile Include="MouseController.cs" />
     <Compile Include="keyboardController.cs" />
     <Compile Include="PlayerDefault.cs" />
+    <Compile Include="PlayerStates\PStateIdleDown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpriteMNA.cs" />
