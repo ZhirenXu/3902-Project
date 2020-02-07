@@ -41,17 +41,32 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\BluePotionCommand.cs" />
+    <Compile Include="Commands\BombCommand.cs" />
+    <Compile Include="Commands\BowCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\MoveDownCommand.cs" />
+    <Compile Include="Commands\MoveLeftCommand.cs" />
+    <Compile Include="Commands\MoveRightCommand.cs" />
+    <Compile Include="Commands\MoveUpCommand.cs" />
+    <Compile Include="Commands\SlotACommand.cs" />
+    <Compile Include="Commands\SlotBCommand.cs" />
+    <Compile Include="Commands\WoodRangCommand.cs" />
+    <Compile Include="Commands\WoodSwordAttackCommand.cs" />
+    <Compile Include="Commands\WoodSwordBeamCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
+    <Compile Include="IPlayerState.cs" />
+    <Compile Include="IPlayer.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="MouseController.cs" />
-    <Compile Include="keyboardController.cs" />
+    <Compile Include="KeyboardController.cs" />
+    <Compile Include="PlayerDefault.cs" />
+    <Compile Include="PlayerStates\PStateMovingDown.cs" />
+    <Compile Include="PlayerStates\PStateIdleDown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpriteMA.cs" />
-    <Compile Include="SpriteNMA.cs" />
     <Compile Include="SpriteMNA.cs" />
-    <Compile Include="SpriteNMNA.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

@@ -1,15 +1,11 @@
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Game1 {
-    public interface IPlayer
+namespace Game1
+{
+    public interface IPlayerState
     {
-        void SetPosition(int x, int y);
-        Vector2 GetPosition();
-        void SetState(IPlayerState state);
-
-        IPlayerState GetState();
         void MoveUp();
         void MoveDown();
         void MoveLeft();
@@ -19,6 +15,5 @@ namespace Game1 {
         void Stop();
         void Update();
         void Draw(SpriteBatch spriteBatch);
-
     }
 }

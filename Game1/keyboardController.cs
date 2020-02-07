@@ -15,25 +15,26 @@ namespace Game1
 
         public void Update()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.D0) || Keyboard.GetState().IsKeyDown(Keys.NumPad0)){
-                myGame.Exit(); 
+            if (Keyboard.GetState().IsKeyDown(Keys.W) || Keyboard.GetState().IsKeyDown(Keys.Up)){
+                myGame.GetPlayer().MoveUp();
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.D1) || Keyboard.GetState().IsKeyDown(Keys.NumPad1))
+            else if(Keyboard.GetState().IsKeyDown(Keys.S) || Keyboard.GetState().IsKeyDown(Keys.Down))
             {
-                myGame.SetPlayerSprite(new SpriteNMNA(myGame));
+                myGame.GetPlayer().MoveDown();
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.D2) || Keyboard.GetState().IsKeyDown(Keys.NumPad2))
+            else if (Keyboard.GetState().IsKeyDown(Keys.A) || Keyboard.GetState().IsKeyDown(Keys.Left))
             {
-                myGame.SetPlayerSprite(new SpriteNMA(myGame));
+                myGame.GetPlayer().MoveLeft();
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.D3) || Keyboard.GetState().IsKeyDown(Keys.NumPad3))
+            else if (Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.Right))
             {
-                myGame.SetPlayerSprite(new SpriteMNA(myGame));
+                myGame.GetPlayer().MoveRight();
             }
-           else  if (Keyboard.GetState().IsKeyDown(Keys.D4) || Keyboard.GetState().IsKeyDown(Keys.NumPad4))
+            else
             {
-                myGame.SetPlayerSprite(new SpriteMA(myGame));
+                myGame.GetPlayer().Stop();
             }
+
         }
        
     }

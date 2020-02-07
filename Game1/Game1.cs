@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
+using Game1.PlayerStates;
 /*Authors: Mike Belair, Chase Armstrong*/
 namespace Game1
 {
@@ -11,6 +12,7 @@ namespace Game1
         SpriteBatch spriteBatch;
         SpriteFont text;
         List<IController> controllers;
+        IPlayer player;
 
         public Game1()
         {
@@ -18,12 +20,18 @@ namespace Game1
             Content.RootDirectory = "Content";
         }
 
+        public IPlayer GetPlayer()
+        {
+            return this.player;
+        }
+
  
         protected override void Initialize()
         {
+            player = new PlayerDefault(100, 100,new PStateIdleDown(this.player)); 
             controllers = new List<IController>();
             controllers.Add(new KeyboardController(this));
-            controllers.Add(new MouseController(this));
+            //controllers.Add(new MouseController(this));
             this.IsMouseVisible = true;
             base.Initialize();
         }
@@ -46,6 +54,7 @@ namespace Game1
             {
                 controller.Update();
             }
+            player.Update();
 
             base.Update(gameTime);
         }
@@ -53,7 +62,7 @@ namespace Game1
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            player.Draw(spriteBatch);
             base.Draw(gameTime);
         }
     }
