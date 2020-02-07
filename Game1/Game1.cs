@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Game1.PlayerStates;
-/*Authors: Mike Belair, Chase Armstrong*/
+/*Authors: Mike Belair, Chase Armstrong, Zhiren Xu*/
 namespace Game1
 {
     public class Game1 : Game
