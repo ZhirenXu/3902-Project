@@ -41,6 +41,19 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\BluePotionCommand.cs" />
+    <Compile Include="Commands\BombCommand.cs" />
+    <Compile Include="Commands\BowCommand.cs" />
+    <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\MoveDownCommand.cs" />
+    <Compile Include="Commands\MoveLeftCommand.cs" />
+    <Compile Include="Commands\MoveRightCommand.cs" />
+    <Compile Include="Commands\MoveUpCommand.cs" />
+    <Compile Include="Commands\SlotACommand.cs" />
+    <Compile Include="Commands\SlotBCommand.cs" />
+    <Compile Include="Commands\WoodRangCommand.cs" />
+    <Compile Include="Commands\WoodSwordAttackCommand.cs" />
+    <Compile Include="Commands\WoodSwordBeamCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IPlayerState.cs" />

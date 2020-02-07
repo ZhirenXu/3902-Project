@@ -15,7 +15,8 @@ namespace Game1
 
 		public void Execute()
 		{
-			myGame.player.SlotB();
+			//sword attack action, whatever that is
+			WoodSwordCommand
 		}
 	}
 }
