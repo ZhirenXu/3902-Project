@@ -4,18 +4,18 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
-    class WoodSwordCommand : ICommand
+    class WoodSwordBeamCommand : ICommand
     {
 		private Game1 myGame;
 
-		public WoodSwordCommand(Game1 game)
+		public WoodSwordBeamCommand(Game1 game)
 		{
 			myGame = game;
 		}
 
 		public void Execute()
 		{
-			myGame.player.SlotB();
+			myGame.GetPlayer().SlotB();
 		}
 	}
 }

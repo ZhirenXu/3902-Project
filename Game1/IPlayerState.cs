@@ -10,7 +10,8 @@ namespace Game1
         void MoveDown();
         void MoveLeft();
         void MoveRight();
-        void Attack();
+        void SlotA();
+        void SlotB();
         void Stop();
         void Update();
         void Draw(SpriteBatch spriteBatch);

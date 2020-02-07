@@ -15,7 +15,7 @@ namespace Game1
 
 		public void Execute()
 		{
-			myGame.player.MoveDown();
+			myGame.GetPlayer().MoveDown();
 		}
 	}
 }

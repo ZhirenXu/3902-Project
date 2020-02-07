@@ -4,11 +4,11 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
-    class WoodSwordCommand : ICommand
+    class WoodSwordAttackCommand : ICommand
     {
 		private Game1 myGame;
 
-		public WoodSwordCommand(Game1 game)
+		public WoodSwordAttackCommand(Game1 game)
 		{
 			myGame = game;
 		}
@@ -16,7 +16,7 @@ namespace Game1
 		public void Execute()
 		{
 			//sword attack action, whatever that is
-			WoodSwordCommand
+			
 		}
 	}
 }

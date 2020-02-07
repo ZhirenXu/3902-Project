@@ -60,7 +60,7 @@
     <Compile Include="IPlayer.cs" />
     <Compile Include="ISprite.cs" />
     <Compile Include="MouseController.cs" />
-    <Compile Include="keyboardController.cs" />
+    <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerDefault.cs" />
     <Compile Include="PlayerStates\PStateMovingDown.cs" />
     <Compile Include="PlayerStates\PStateIdleDown.cs" />

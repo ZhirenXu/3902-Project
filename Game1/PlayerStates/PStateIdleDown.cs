@@ -32,9 +32,14 @@ namespace Game1.PlayerStates
             //player.SetState(new PStateMovingRight(player));
         }
 
-        public void Attack()
+        public void SlotA()
         {
             //player.SetState(new PStateAttackingRight(player));
+        }
+
+        public void SlotB()
+        {
+
         }
 
         public void Stop()

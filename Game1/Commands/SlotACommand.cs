@@ -15,7 +15,7 @@ namespace Game1
 
 		public void Execute()
 		{
-			myGame.player.SlotA();
+			myGame.GetPlayer().SlotA();
 		}
 	}
 }

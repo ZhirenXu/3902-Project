@@ -56,9 +56,14 @@ namespace Game1
 			state.MoveRight();
 		}
 
-		public void Attack()
+		public void SlotA()
 		{
-			state.Attack();
+			state.SlotA();
+		}
+
+		public void SlotB()
+		{
+			state.SlotB();
 		}
 
 		public void Stop()
