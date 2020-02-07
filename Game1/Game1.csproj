@@ -62,6 +62,9 @@
     <Compile Include="MouseController.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerDefault.cs" />
+    <Compile Include="PlayerSprites\LinkMovingDown.cs" />
+    <Compile Include="PlayerSprites\LinkMovingLeft.cs" />
+    <Compile Include="PlayerSprites\LinkMovingRight.cs" />
     <Compile Include="PlayerSprites\LinkMovingUp.cs" />
     <Compile Include="PlayerStates\PStateIdleRight.cs" />
     <Compile Include="PlayerStates\PStateIdleLeft.cs" />

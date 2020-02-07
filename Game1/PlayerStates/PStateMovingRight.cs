@@ -24,12 +24,12 @@ namespace Game1.PlayerStates
         }
         public void MoveLeft()
         {
-            //player.SetState(new PStateMovingLeft(player));
+            player.SetState(new PStateMovingLeft(player));
         }
 
         public void MoveRight()
         {
-            //player.SetState(new PStateMovingRight(player));
+            player.SetState(new PStateMovingRight(player));
         }
 
         public void SlotA()

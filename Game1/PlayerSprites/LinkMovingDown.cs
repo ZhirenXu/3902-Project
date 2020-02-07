@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1.PlayerSprites
 {
-    class LinkMovingUp :ISprite
+    class LinkMovingDown :ISprite
     {
         Texture2D texture;
         IPlayer player;
@@ -12,14 +12,14 @@ namespace Game1.PlayerSprites
         int srcHeight = 16;
         int destWidth = 30;
         int destHeight = 32;
-        int srcX = 60; /*Change this*/
+        int srcX = 0; /*Change this*/
         int srcY = 0;  /*and this*/
         int curFrame = 1;
         int totalFrames = 2; /*Maybe this*/
         int delay = 0;     
         int moveSpeed = 6;
 
-        public LinkMovingUp(IPlayer player, Texture2D texture)
+        public LinkMovingDown(IPlayer player, Texture2D texture)
         {
             this.texture = texture;
             this.player = player;
@@ -36,7 +36,7 @@ namespace Game1.PlayerSprites
                     curFrame = 1;
                 }
             }
-            player.SetPosition((int)player.GetPosition().X, (int)player.GetPosition().Y - moveSpeed); /*Change this*/
+            player.SetPosition((int)player.GetPosition().X, (int)player.GetPosition().Y + moveSpeed); /*Change this*/
         }
 
         public void Draw(SpriteBatch spriteBatch)
@@ -45,12 +45,12 @@ namespace Game1.PlayerSprites
             Rectangle srcRec;
             if (curFrame == 1) /*Change these to correct frames, might need to add/delete else if*/
             {
-                srcX = 60;
+                srcX = 0;
                 srcY = 0;
             }
             else if(curFrame == 2)
             {
-                srcX = 60;
+                srcX = 0;
                 srcY = 30;
             }
             srcRec = new Rectangle(srcX, srcY, srcWidth, srcHeight);
