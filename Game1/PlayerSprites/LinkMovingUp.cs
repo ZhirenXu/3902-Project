@@ -36,7 +36,7 @@ namespace Game1.PlayerSprites
                     curFrame = 1;
                 }
             }
-            player.SetPosition((int)player.GetPosition().X + moveSpeed, (int)player.GetPosition().Y + moveSpeed);
+            player.SetPosition((int)player.GetPosition().X, (int)player.GetPosition().Y + moveSpeed); /*Change this*/
         }
 
         public void Draw(SpriteBatch spriteBatch)
