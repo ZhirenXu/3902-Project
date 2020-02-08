@@ -24,7 +24,7 @@ namespace Game1.PlayerStates
         }
         public void MoveLeft()
         {
-            
+            player.SetState(new PStateMovingLeft(player));
         }
 
         public void MoveRight()

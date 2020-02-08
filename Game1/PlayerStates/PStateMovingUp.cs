@@ -20,7 +20,7 @@ namespace Game1.PlayerStates
 
         public void MoveDown()
         {
-            
+            player.SetState(new PStateMovingDown(player));
         }
         public void MoveLeft()
         {

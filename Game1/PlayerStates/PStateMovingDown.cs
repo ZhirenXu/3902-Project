@@ -15,7 +15,7 @@ namespace Game1.PlayerStates
         }
         public void MoveUp()
         {
-           
+            player.SetState(new PStateMovingUp(player));
         }
 
         public void MoveDown()

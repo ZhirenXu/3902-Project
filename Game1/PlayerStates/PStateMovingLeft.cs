@@ -29,7 +29,7 @@ namespace Game1.PlayerStates
 
         public void MoveRight()
         {
-       
+            player.SetState(new PStateMovingRight(player));
         }
 
         public void SlotA()
