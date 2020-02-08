@@ -3,14 +3,14 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Game1.PlayerStates;
-/*Authors: Mike Belair, Chase Armstrong*/
+/*Authors: Mike Belair, Chase Armstrong, Zhiren Xu*/
 namespace Game1
 {
     public class Game1 : Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        SpriteFont text;
+        //SpriteFont text;
         List<IController> controllers;
         IPlayer player;
 
@@ -18,6 +18,7 @@ namespace Game1
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+
         }
 
         public IPlayer GetPlayer()
@@ -28,7 +29,9 @@ namespace Game1
  
         protected override void Initialize()
         {
-            player = new PlayerDefault(100, 100,new PStateIdleDown(this.player)); 
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            SpriteFactory.Instance.LoadAll(Content);
+            player = new PlayerDefault(100, 100); 
             controllers = new List<IController>();
             controllers.Add(new KeyboardController(this));
             //controllers.Add(new MouseController(this));
@@ -38,14 +41,13 @@ namespace Game1
 
         protected override void LoadContent()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
 
         }
 
    
         protected override void UnloadContent()
         {
-  
+            
         }
 
         protected override void Update(GameTime gameTime)
