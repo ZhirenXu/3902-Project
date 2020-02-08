@@ -13,10 +13,7 @@ namespace Game1.PlayerSprites
         int destWidth = 30;
         int destHeight = 32;
         int srcX = 30; /*Change this*/
-        int srcY = 30;  /*and this*/
-        int curFrame = 1;
-        int totalFrames = 2; /*Maybe this*/
-        int delay = 0;     
+        int srcY = 0;  /*and this*/ 
 
         public LinkIdleLeft(IPlayer player, Texture2D texture)
         {
@@ -25,17 +22,7 @@ namespace Game1.PlayerSprites
         }
         public void Update()
         {
-            delay++;
-            if(delay == 7) /*Delay of frame changes*/
-            {
-                delay = 0;
-                curFrame++;
-                if(curFrame > totalFrames)
-                {
-                    curFrame = 1;
-                }
-            }
-            player.SetPosition((int)player.GetPosition().X, (int)player.GetPosition().Y); /*Change this*/
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
