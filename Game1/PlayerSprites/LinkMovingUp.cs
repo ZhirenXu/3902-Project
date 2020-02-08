@@ -14,6 +14,8 @@ namespace Game1.PlayerSprites
         int destHeight = 32;
         int srcX = 60; /*Change this*/
         int srcY = 0;  /*and this*/
+        int spriteX;
+        int spriteY;
         int curFrame = 1;
         int totalFrames = 2; /*Maybe this*/
         int delay = 0;     
@@ -23,6 +25,15 @@ namespace Game1.PlayerSprites
         {
             this.texture = texture;
             this.player = player;
+        }
+        public void calcPosition()
+        {
+            spriteX = (int)player.GetPosition().X;
+            spriteY = (int)player.GetPosition().Y - moveSpeed;
+            if(spriteY < 0)
+            {
+                spriteY = 0;
+            }
         }
         public void Update()
         {
@@ -36,7 +47,8 @@ namespace Game1.PlayerSprites
                     curFrame = 1;
                 }
             }
-            player.SetPosition((int)player.GetPosition().X, (int)player.GetPosition().Y - moveSpeed); /*Change this*/
+            calcPosition();
+            player.SetPosition(spriteX, spriteY); /*Change this*/
         }
 
         public void Draw(SpriteBatch spriteBatch)
