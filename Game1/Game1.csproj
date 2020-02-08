@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="SpriteFactory.cs" />
     <Compile Include="Commands\BluePotionCommand.cs" />
     <Compile Include="Commands\BombCommand.cs" />
     <Compile Include="Commands\BowCommand.cs" />
@@ -59,14 +60,26 @@
     <Compile Include="IPlayerState.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="ISprite.cs" />
-    <Compile Include="MouseController.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerDefault.cs" />
+    <Compile Include="PlayerSprites\LinkIdleDown.cs" />
+    <Compile Include="PlayerSprites\LinkMovingDown.cs" />
+    <Compile Include="PlayerSprites\LinkIdleLeft.cs" />
+    <Compile Include="PlayerSprites\LinkMovingLeft.cs" />
+    <Compile Include="PlayerSprites\LinkIdleRight.cs" />
+    <Compile Include="PlayerSprites\LinkMovingRight.cs" />
+    <Compile Include="PlayerSprites\LinkIdleUp.cs" />
+    <Compile Include="PlayerSprites\LinkMovingUp.cs" />
+    <Compile Include="PlayerStates\PStateIdleRight.cs" />
+    <Compile Include="PlayerStates\PStateIdleLeft.cs" />
+    <Compile Include="PlayerStates\PStateIdleUp.cs" />
+    <Compile Include="PlayerStates\PStateMovingRight.cs" />
+    <Compile Include="PlayerStates\PStateMovingLeft.cs" />
+    <Compile Include="PlayerStates\PStateMovingUp.cs" />
     <Compile Include="PlayerStates\PStateMovingDown.cs" />
     <Compile Include="PlayerStates\PStateIdleDown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpriteMNA.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

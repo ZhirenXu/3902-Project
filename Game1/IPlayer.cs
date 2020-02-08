@@ -5,6 +5,9 @@ using Microsoft.Xna.Framework.Input;
 namespace Game1 {
     public interface IPlayer
     {
+        int Speed { get; set; }
+        int Width{ get; set;}
+        int Height { get; set; }
         void SetPosition(int x, int y);
         Vector2 GetPosition();
         void SetState(IPlayerState state);

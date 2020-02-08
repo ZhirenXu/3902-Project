@@ -4,14 +4,14 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1.PlayerStates
 {
-    class PStateMovingDown : IPlayerState
+    class PStateMovingRight : IPlayerState
     {
         ISprite sprite;
         IPlayer player;
-        public PStateMovingDown(IPlayer player)
+        public PStateMovingRight(IPlayer player)
         {
             this.player = player;
-            this.sprite = SpriteFactory.Instance.GetLinkMovingDown(player);
+            this.sprite = SpriteFactory.Instance.GetLinkMovingRight(player);
         }
         public void MoveUp()
         {
@@ -20,7 +20,7 @@ namespace Game1.PlayerStates
 
         public void MoveDown()
         {
-            
+            player.SetState(new PStateMovingDown(player));
         }
         public void MoveLeft()
         {
@@ -29,7 +29,7 @@ namespace Game1.PlayerStates
 
         public void MoveRight()
         {
-            player.SetState(new PStateMovingRight(player));
+            
         }
 
         public void SlotA()
@@ -44,7 +44,7 @@ namespace Game1.PlayerStates
 
         public void Stop()
         {
-            player.SetState(new PStateIdleDown(player));
+            player.SetState(new PStateIdleRight(player));
         }
 
         public void Update()
