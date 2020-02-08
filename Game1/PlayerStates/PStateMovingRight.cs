@@ -11,25 +11,25 @@ namespace Game1.PlayerStates
         public PStateMovingRight(IPlayer player)
         {
             this.player = player;
-            //this.sprite = new LinkMovingDown(player);
+            this.sprite = SpriteFactory.Instance.GetLinkMovingRight(player);
         }
         public void MoveUp()
         {
-           
+            player.SetState(new PStateMovingUp(player));
         }
 
         public void MoveDown()
         {
-            
+            player.SetState(new PStateMovingDown(player));
         }
         public void MoveLeft()
         {
-            player.SetState(new PStateMovingLeft(player));
+            
         }
 
         public void MoveRight()
         {
-            player.SetState(new PStateMovingRight(player));
+            
         }
 
         public void SlotA()

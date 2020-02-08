@@ -11,7 +11,7 @@ namespace Game1.PlayerStates
         public PStateMovingUp(IPlayer player)
         {
             this.player = player;
-            //this.sprite = new LinkMovingUp(player);
+            this.sprite = SpriteFactory.Instance.GetLinkMovingUp(player);
         }
         public void MoveUp()
         {

@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="SpriteFactory.cs" />
     <Compile Include="Commands\BluePotionCommand.cs" />
     <Compile Include="Commands\BombCommand.cs" />
     <Compile Include="Commands\BowCommand.cs" />
@@ -59,7 +60,6 @@
     <Compile Include="IPlayerState.cs" />
     <Compile Include="IPlayer.cs" />
     <Compile Include="ISprite.cs" />
-    <Compile Include="MouseController.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerDefault.cs" />
     <Compile Include="PlayerSprites\LinkIdleDown.cs" />
@@ -80,7 +80,6 @@
     <Compile Include="PlayerStates\PStateIdleDown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpriteMNA.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

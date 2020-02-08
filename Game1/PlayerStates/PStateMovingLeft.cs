@@ -11,7 +11,7 @@ namespace Game1.PlayerStates
         public PStateMovingLeft(IPlayer player)
         {
             this.player = player;
-            //this.sprite = new SpriteLinkMovingDown(player);
+            this.sprite = SpriteFactory.Instance.GetLinkMovingLeft(player);
         }
         public void MoveUp()
         {
