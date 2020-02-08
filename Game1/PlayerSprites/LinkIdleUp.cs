@@ -10,8 +10,8 @@ namespace Game1.PlayerSprites
         IPlayer player;
         int srcWidth = 15;
         int srcHeight = 16;
-        int destWidth = 30;
-        int destHeight = 32;
+        int destWidth;
+        int destHeight;
         int srcX = 60; /*Change this*/
         int srcY = 0;  /*and this*/
 
@@ -19,6 +19,8 @@ namespace Game1.PlayerSprites
         {
             this.texture = texture;
             this.player = player;
+            this.destWidth = player.Width;
+            this.destHeight = player.Height;
         }
         public void Update()
         {

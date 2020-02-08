@@ -9,14 +9,22 @@ namespace Game1
 	{
 		private Vector2 position;
 		private IPlayerState state;
+		int width;
+		int height;
 		public PlayerDefault(int x, int y)
 		{
-			this.position = new Vector2();
+			this.Speed = 5;                /*Changeable*/
+			this.Width = 45;               /*Must be a multiple of 15*/
+			this.Height = 48;              /*Must be a multiple of 16*/
+			this.position = new Vector2(); 
 			this.position.X = x;
 			this.position.Y = y;
 			this.state = new PStateIdleDown(this);
 		}
 
+        public int Speed { get; set; }
+		public int Width { get; set; } 
+		public int Height { get; set; } 
 		public void SetPosition(int x, int y)
 		{
 			this.position.X = x;

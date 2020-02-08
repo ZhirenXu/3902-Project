@@ -49,3 +49,5 @@ C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\bin\Windows\x86
 C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\obj\x86\Debug\Game1.csproj.CopyComplete
+C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\Content\ProjectSpriteSheets\Blade trap, Gel, Goriya, keese, stalfos, wall master.xnb
+C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\Content\ProjectSpriteSheets\boss.xnb

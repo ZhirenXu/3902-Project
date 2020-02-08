@@ -10,8 +10,8 @@ namespace Game1.PlayerSprites
         IPlayer player;
         int srcWidth = 15;
         int srcHeight = 16;
-        int destWidth = 30;
-        int destHeight = 32;
+        int destWidth;
+        int destHeight;
         int srcX = 30; /*Change this*/
         int srcY = 30;  /*and this*/
         int spriteX;
@@ -19,12 +19,15 @@ namespace Game1.PlayerSprites
         int curFrame = 1;
         int totalFrames = 2; /*Maybe this*/
         int delay = 0;     
-        int moveSpeed = 6;
+        int moveSpeed;
 
         public LinkMovingLeft(IPlayer player, Texture2D texture)
         {
             this.texture = texture;
             this.player = player;
+            this.moveSpeed = player.Speed;
+            this.destWidth = player.Width;
+            this.destHeight = player.Height;
         }
         public void calcPosition()
         {
