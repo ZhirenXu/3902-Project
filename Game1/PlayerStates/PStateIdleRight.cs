@@ -8,10 +8,13 @@ namespace Game1.PlayerStates
     {
         ISprite sprite;
         IPlayer player;
-        public PStateIdleRight(IPlayer player)
+        int coolDown;
+        int timer = 0;
+        public PStateIdleRight(IPlayer player, int coolDown = 0)
         {
             this.player = player;
             this.sprite = SpriteFactory.Instance.GetLinkIdleRight(player);
+            this.coolDown = coolDown;
         }
         public void MoveUp()
         {
@@ -34,7 +37,10 @@ namespace Game1.PlayerStates
 
         public void SlotA()
         {
-            player.SetState(new PStateStabbingRight(player));
+            if(timer == coolDown)
+            {
+                player.SetState(new PStateStabbingRight(player));
+            }   
         }
 
         public void SlotB()
@@ -49,6 +55,10 @@ namespace Game1.PlayerStates
 
         public void Update()
         {
+            if (coolDown != 0)
+            {
+                timer++;
+            }
             sprite.Update();
         }
 

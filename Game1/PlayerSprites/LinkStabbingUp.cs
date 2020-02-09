@@ -24,7 +24,8 @@ namespace Game1.PlayerSprites
         int swordOffset = 12;
         int curFrame = 1;
         int totalFrames = 5; /*Maybe this*/
-        int delay = 0;     
+        int delay = 0;
+        int coolDown = 20;
 
         public LinkStabbingUp(IPlayer player, Texture2D texture)
         {
@@ -45,7 +46,7 @@ namespace Game1.PlayerSprites
                 curFrame++;
                 if(curFrame > totalFrames)
                 {
-                    player.SetState(new PStateIdleUp(player));
+                    player.SetState(new PStateIdleUp(player,coolDown));
                 }
             }
 

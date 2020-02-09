@@ -25,6 +25,7 @@ namespace Game1.PlayerSprites
         int curFrame = 1;
         int totalFrames = 5; /*Maybe this*/
         int delay = 0;
+        int coolDown = 20;
 
         public LinkStabbingDown(IPlayer player, Texture2D texture)
         {
@@ -45,7 +46,7 @@ namespace Game1.PlayerSprites
                 curFrame++;
                 if (curFrame > totalFrames)
                 {
-                    player.SetState(new PStateIdleDown(player));
+                    player.SetState(new PStateIdleDown(player,coolDown));
                 }
             }
 
