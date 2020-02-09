@@ -4,12 +4,12 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/font.spritefont</File>
-    <File>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/luigi.png</File>
-    <File>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master.png</File>
-    <File>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/boss.png</File>
-    <File>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/LinkSpriteSheet.png</File>
-    <File>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/Text.png</File>
+    <File>C:/Users/crazy/source/repos/Belair34/3902-Project/Game1/Content/font.spritefont</File>
+    <File>C:/Users/crazy/source/repos/Belair34/3902-Project/Game1/Content/luigi.png</File>
+    <File>C:/Users/crazy/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master.png</File>
+    <File>C:/Users/crazy/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/boss.png</File>
+    <File>C:/Users/crazy/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/LinkSpriteSheet.png</File>
+    <File>C:/Users/crazy/source/repos/Belair34/3902-Project/Game1/Content/Text.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />
