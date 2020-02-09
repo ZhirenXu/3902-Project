@@ -37,7 +37,7 @@ namespace Game1.PlayerStates
 
         public void SlotA()
         {
-            if (timer == coolDown)
+            if (timer >= coolDown)
             {
                 player.SetState(new PStateStabbingDown(player));
             }
@@ -55,9 +55,13 @@ namespace Game1.PlayerStates
 
         public void Update()
         {
-            if (coolDown != 0)
+            if (coolDown != 0 && timer < 200)
             {
                 timer++;
+            }
+            else
+            {
+                timer = 999;
             }
             sprite.Update();
         }
