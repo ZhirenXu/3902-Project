@@ -42,7 +42,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="IProjectile.cs" />
+    <Compile Include="PlayerSprites\LinkStabbingRight.cs" />
+    <Compile Include="PlayerSprites\LinkStabbingLeft.cs" />
+    <Compile Include="PlayerSprites\LinkStabbingDown.cs" />
     <Compile Include="PlayerSprites\LinkStabbingUp.cs" />
+    <Compile Include="PlayerStates\PStateStabbingRight.cs" />
+    <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
+    <Compile Include="PlayerStates\PStateStabbingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingUp.cs" />
     <Compile Include="SpriteFactory.cs" />
     <Compile Include="Commands\BluePotionCommand.cs" />
