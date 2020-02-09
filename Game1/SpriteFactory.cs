@@ -65,5 +65,10 @@ namespace Game1
             return new LinkMovingLeft(player, linkSheet);
         }
 
+        public ISprite GetLinkStabbingUp(IPlayer player)
+        {
+            return new LinkStabbingUp(player, linkSheet);
+        }
+
     }
 }

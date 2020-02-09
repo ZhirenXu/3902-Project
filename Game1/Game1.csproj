@@ -41,6 +41,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IProjectile.cs" />
+    <Compile Include="PlayerSprites\LinkStabbingUp.cs" />
+    <Compile Include="PlayerStates\PStateStabbingUp.cs" />
     <Compile Include="SpriteFactory.cs" />
     <Compile Include="Commands\BluePotionCommand.cs" />
     <Compile Include="Commands\BombCommand.cs" />
@@ -94,6 +97,9 @@
   <ItemGroup>
     <MonoGameContentReference Include="Content\Content.mgcb" />
     <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProjectileSprites\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

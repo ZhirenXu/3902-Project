@@ -10,8 +10,8 @@ namespace Game1.PlayerSprites
         IPlayer player;
         int srcWidth = 15;
         int srcHeight = 16;
-        int destWidth;
-        int destHeight;
+        int destWidth = 15;
+        int destHeight = 16;
         int srcX = 60; /*Change this*/
         int srcY = 0;  /*and this*/
         int spriteX;
@@ -26,8 +26,8 @@ namespace Game1.PlayerSprites
             this.texture = texture;
             this.player = player;
             this.moveSpeed = player.Speed;
-            this.destWidth = player.Width;
-            this.destHeight = player.Height;
+            this.destWidth *= player.Size;
+            this.destHeight *= player.Size;
         }
         public void calcPosition()
         {
