@@ -23,7 +23,6 @@ C:\Users\MichaelWindows\source\repos\Game1\Game1\obj\x86\Debug\Game1.pdb
 C:\Users\MichaelWindows\source\repos\Game1\Game1\bin\Windows\x86\Debug\Content\luigi.xnb
 C:\Users\MichaelWindows\source\repos\Game1\Game1\bin\Windows\x86\Debug\Content\Text.xnb
 C:\Users\MichaelWindows\source\repos\Game1\Game1\bin\Windows\x86\Debug\Content\font.xnb
-C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\obj\x86\Debug\Game1.csprojAssemblyReference.cache
 C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\obj\x86\Debug\Game1.exe
 C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\obj\x86\Debug\Game1.pdb
 C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\Content\ProjectSpriteSheets\LinkSpriteSheet.xnb
@@ -51,3 +50,4 @@ C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\bin\Windows\x86
 C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\obj\x86\Debug\Game1.csproj.CopyComplete
 C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\Content\ProjectSpriteSheets\Blade trap, Gel, Goriya, keese, stalfos, wall master.xnb
 C:\Users\MichaelWindows\Source\Repos\Belair34\3902-Project\Game1\bin\Windows\x86\Debug\Content\ProjectSpriteSheets\boss.xnb
+C:\Users\MichaelWindows\source\repos\Belair34\3902-Project\Game1\obj\x86\Debug\Game1.csprojAssemblyReference.cache

@@ -11,16 +11,17 @@ namespace Game1.PlayerSprites
         IPlayer player;
         int linkSrcWidth = 15;
         int linkSrcHeight = 16;
-        int swordSrcWidth = 13;
-        int swordSrcHeight = 15;
+        int swordSrcWidth = 12;
+        int swordSrcHeight = 16;
         int linkDestWidth = 15;
         int linkDestHeight = 16;
-        int swordDestWidth = 13;
-        int swordDestHeight = 15;
+        int swordDestWidth = 12;
+        int swordDestHeight = 16;
         int linkSrcX = 60; /*Change this*/
         int linkSrcY = 60;  /*and this*/
         int swordSrcX = 61;
         int swordSrcY = 195;
+        int swordOffset = 12;
         int curFrame = 1;
         int totalFrames = 5; /*Maybe this*/
         int delay = 0;     
@@ -33,6 +34,7 @@ namespace Game1.PlayerSprites
             this.linkDestHeight *= player.Size;
             this.swordDestWidth *= player.Size;
             this.swordDestHeight *= player.Size;
+            this.swordOffset *= player.Size;
         }
         public void Update()
         {
@@ -57,19 +59,19 @@ namespace Game1.PlayerSprites
             Rectangle swordDestRec;
             if(curFrame == 1)
             {
-                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-player.Size, swordDestWidth, swordDestHeight);
+                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-swordOffset/3, swordDestWidth, swordDestHeight);
             }
             else if(curFrame == 2)
             {
-                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-5*player.Size, swordDestWidth, swordDestHeight);
+                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-swordOffset/2, swordDestWidth, swordDestHeight);
             }
             else if(curFrame == 3 || curFrame == 4)
             {
-                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-11*player.Size, swordDestWidth, swordDestHeight);
+                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-swordOffset, swordDestWidth, swordDestHeight);
             }
             else
             {
-                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-5*player.Size, swordDestWidth, swordDestHeight);
+                swordDestRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y-swordOffset/2, swordDestWidth, swordDestHeight);
             }
             spriteBatch.Begin();
             spriteBatch.Draw(texture, swordDestRec, swordSrcRec, Color.White);
