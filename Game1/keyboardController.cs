@@ -15,7 +15,7 @@ namespace Game1
 
         public void Update()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Z) || Keyboard.GetState().IsKeyDown(Keys.N))
+            if (Keyboard.GetState().IsKeyDown(Keys.Z) || Keyboard.GetState().IsKeyDown(Keys.N) || Keyboard.GetState().IsKeyDown(Keys.Space))
             {
                 myGame.GetPlayer().SlotA();
             }
@@ -33,10 +33,6 @@ namespace Game1
             else if (Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.Right))
             {
                 myGame.GetPlayer().MoveRight();
-            }
-            else if (Keyboard.GetState().IsKeyDown(Keys.Space))
-            {
-                myGame.GetPlayer().SlotA();
             }
             else
             {

@@ -34,7 +34,7 @@ namespace Game1.PlayerStates
 
         public void SlotA()
         {
-            //player.SetState(new PStateAttackingRight(player));
+            player.SetState(new PStateStabbingDown(player));
         }
 
         public void SlotB()
