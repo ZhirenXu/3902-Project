@@ -34,6 +34,10 @@ namespace Game1
             {
                 myGame.GetPlayer().MoveRight();
             }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Space))
+            {
+                myGame.GetPlayer().SlotA();
+            }
             else
             {
                 myGame.GetPlayer().Stop();
