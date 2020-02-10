@@ -13,7 +13,7 @@ namespace Game1.PlayerSprites
         int destWidth = 15;
         int destHeight = 16;
         int srcX = 0; /*Change this*/
-        int srcY = 0;  /*and this*/
+        int srcY = 30;  /*and this*/
         int curFrame = 1;
         int totalFrames = 2; /*Maybe this*/
         int delay = 0;     
@@ -49,12 +49,12 @@ namespace Game1.PlayerSprites
             if (curFrame == 1) /*Change these to correct frames, might need to add/delete else if*/
             {
                 srcX = 0;
-                srcY = 0;
+                srcY = 30;
             }
             else if(curFrame == 2)
             {
                 srcX = 0;
-                srcY = 30;
+                srcY = 0;
             }
             srcRec = new Rectangle(srcX, srcY, srcWidth, srcHeight);
             spriteBatch.Begin();
