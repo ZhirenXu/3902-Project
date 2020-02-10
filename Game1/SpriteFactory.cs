@@ -100,5 +100,21 @@ namespace Game1
         {
             return new LinkArrowRight(player, linkSheet);
         }
+        public ISprite GetLinkDamagedUp(IPlayer player)
+        {
+            return new LinkDamagedUp(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedDown(IPlayer player)
+        {
+            return new LinkDamagedDown(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedRight(IPlayer player)
+        {
+            return new LinkDamagedRight(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedLeft(IPlayer player)
+        {
+            return new LinkDamagedLeft(player, linkSheet);
+        }
     }
 }

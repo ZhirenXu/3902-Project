@@ -42,10 +42,18 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="IProjectile.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedLeft.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedRight.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedDown.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedUp.cs" />
     <Compile Include="PlayerSprites\LinkStabbingRight.cs" />
     <Compile Include="PlayerSprites\LinkStabbingLeft.cs" />
     <Compile Include="PlayerSprites\LinkStabbingDown.cs" />
     <Compile Include="PlayerSprites\LinkStabbingUp.cs" />
+    <Compile Include="PlayerStates\PStateDamagedRight.cs" />
+    <Compile Include="PlayerStates\PStateDamagedLeft.cs" />
+    <Compile Include="PlayerStates\PStateDamagedDown.cs" />
+    <Compile Include="PlayerStates\PStateDamagedUp.cs" />
     <Compile Include="PlayerStates\PStateArrowRight.cs" />
     <Compile Include="PlayerStates\PStateArrowLeft.cs" />
     <Compile Include="PlayerStates\PStateArrowUp.cs" />
