@@ -8,7 +8,7 @@ namespace Game1
     public class KeyboardController : IController
     {
         Game1 myGame;
-        public KeyboardController(Game1 game) 
+        public KeyboardController(Game1 game)
         {
             myGame = game;
         }
