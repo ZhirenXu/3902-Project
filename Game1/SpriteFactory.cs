@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Game1.PlayerSprites;
+using Game1.ProjectileSprites;
 
 namespace Game1
 {
@@ -84,9 +85,13 @@ namespace Game1
         {
             return new LinkStabbingRight(player, linkSheet);
         }
-        public ISprite GetLinkArrowDown(IPlayer player)
+        public ISprite GetLinkShootingDown(IPlayer player, System.Type type)
         {
-            return new LinkArrowDown(player, linkSheet);
+            return new LinkShootingDown(player, linkSheet, type);
+        }
+        public ISprite GetLinkArrowDown(IProjectile projectile)
+        {
+            return new ArrowDown(projectile, linkSheet);
         }
         public ISprite GetLinkArrowUp(IPlayer player)
         {
@@ -99,22 +104,6 @@ namespace Game1
         public ISprite GetLinkArrowRight(IPlayer player)
         {
             return new LinkArrowRight(player, linkSheet);
-        }
-        public ISprite GetLinkDamagedUp(IPlayer player)
-        {
-            return new LinkDamagedUp(player, linkSheet);
-        }
-        public ISprite GetLinkDamagedDown(IPlayer player)
-        {
-            return new LinkDamagedDown(player, linkSheet);
-        }
-        public ISprite GetLinkDamagedRight(IPlayer player)
-        {
-            return new LinkDamagedRight(player, linkSheet);
-        }
-        public ISprite GetLinkDamagedLeft(IPlayer player)
-        {
-            return new LinkDamagedLeft(player, linkSheet);
         }
     }
 }

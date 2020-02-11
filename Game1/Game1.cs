@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Game1.PlayerStates;
+using Game1.Projectiles;
 /*Authors: Mike Belair, Chase Armstrong, Zhiren Xu, Xian Zhang*/
 namespace Game1
 {
@@ -31,8 +32,8 @@ namespace Game1
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteFactory.Instance.LoadAll(Content);
-            player = new PlayerDefault(100, 100); 
-            controllers = new List<IController>();
+            player = new PlayerDefault(100, 100, 6, 6); 
+            controllers = new List<IController>();           /*Controllers*/
             controllers.Add(new KeyboardController(this));
             //controllers.Add(new MouseController(this));
             this.IsMouseVisible = true;
@@ -57,7 +58,6 @@ namespace Game1
                 controller.Update();
             }
             player.Update();
-
             base.Update(gameTime);
         }
 

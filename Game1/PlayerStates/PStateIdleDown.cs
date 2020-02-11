@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Game1.Projectiles;
 
 namespace Game1.PlayerStates
 {
@@ -45,7 +46,7 @@ namespace Game1.PlayerStates
 
         public void SlotB()
         {
-
+            player.SetState(new PStateShootingDown(player, new ProjLinkArrowDown(player).GetType()));
         }
 
         public void Stop()

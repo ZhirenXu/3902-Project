@@ -1,17 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
-    interface IProjectile
+    public interface IProjectile
     {
-        void shoot();
+        int Size { get; set; }
+        int Speed { get; set; }
+        int ShotDistance { get; set; }
+        void SetPosition(int x, int y);
+        Vector2 GetPosition();
+        void Shoot();
+        void Explode();
+        void Update();
+        void Draw(SpriteBatch spriteBatch);
 
-        void explode();
-
-     
     }
 }

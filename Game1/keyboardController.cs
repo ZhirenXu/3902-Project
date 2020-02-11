@@ -19,6 +19,10 @@ namespace Game1
             {
                 myGame.GetPlayer().SlotA();
             }
+            else if (Keyboard.GetState().IsKeyDown(Keys.D1) || Keyboard.GetState().IsKeyDown(Keys.NumPad1))
+            {
+                myGame.GetPlayer().SlotB();
+            }
             else if ((Keyboard.GetState().IsKeyDown(Keys.W) || Keyboard.GetState().IsKeyDown(Keys.Up)) && !((Keyboard.GetState().IsKeyDown(Keys.S) || Keyboard.GetState().IsKeyDown(Keys.Down))))
             {
                 myGame.GetPlayer().MoveUp();
