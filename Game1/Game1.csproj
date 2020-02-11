@@ -41,7 +41,12 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="EnemySprites\GelLinkIdleDown.cs" />
     <Compile Include="IProjectile.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedDown.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedLeft.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedRight.cs" />
+    <Compile Include="PlayerSprites\LinkDamagedUp.cs" />
     <Compile Include="PlayerSprites\LinkShootingDown.cs" />
     <Compile Include="PlayerSprites\LinkStabbingRight.cs" />
     <Compile Include="PlayerSprites\LinkStabbingLeft.cs" />
@@ -50,6 +55,10 @@
     <Compile Include="PlayerStates\PStateArrowRight.cs" />
     <Compile Include="PlayerStates\PStateArrowLeft.cs" />
     <Compile Include="PlayerStates\PStateArrowUp.cs" />
+    <Compile Include="PlayerStates\PStateDamagedDown.cs" />
+    <Compile Include="PlayerStates\PStateDamagedLeft.cs" />
+    <Compile Include="PlayerStates\PStateDamagedRight.cs" />
+    <Compile Include="PlayerStates\PStateDamagedUp.cs" />
     <Compile Include="PlayerStates\PStateShootingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingRight.cs" />
     <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
