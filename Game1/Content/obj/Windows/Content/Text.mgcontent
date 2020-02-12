@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/MichaelWindows/Source/Repos/Belair34/3902-Project/Game1/Content/Text.png</SourceFile>
+  <SourceFile>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/Text.png</SourceFile>
   <SourceTime>2020-02-04T19:46:27.2626405-05:00</SourceTime>
-  <DestFile>C:/Users/MichaelWindows/Source/Repos/Belair34/3902-Project/Game1/Content/bin/Windows/Content/Text.xnb</DestFile>
-  <DestTime>2020-02-11T00:48:11.7002192-05:00</DestTime>
+  <DestFile>C:/Users/MichaelWindows/source/repos/Belair34/3902-Project/Game1/Content/bin/Windows/Content/Text.xnb</DestFile>
+  <DestTime>2020-02-12T17:38:49.8515365-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
