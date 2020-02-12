@@ -15,6 +15,9 @@ namespace Game1
 
 		public void Execute()
 		{
+			//if no arrows, do nothing and end command
+			//else, create arrorow projectile
+			//decremement arrow
 			myGame.GetPlayer().SlotB();
 		}
 	}

@@ -81,8 +81,7 @@
     <Compile Include="Commands\SlotACommand.cs" />
     <Compile Include="Commands\SlotBCommand.cs" />
     <Compile Include="Commands\WoodRangCommand.cs" />
-    <Compile Include="Commands\WoodSwordAttackCommand.cs" />
-    <Compile Include="Commands\WoodSwordBeamCommand.cs" />
+    <Compile Include="Commands\UseSwordCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IPlayerState.cs" />

@@ -15,6 +15,8 @@ namespace Game1
 
 		public void Execute()
 		{
+			//restore all hearts
+			//remove potion from inventory
 			myGame.GetPlayer().SlotB();
 		}
 	}

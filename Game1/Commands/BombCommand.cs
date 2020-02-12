@@ -15,6 +15,8 @@ namespace Game1
 
 		public void Execute()
 		{
+			//decrement bombs from inventory
+			//place bomb one tile away from link in the direction he's facing
 			myGame.GetPlayer().SlotB();
 		}
 	}

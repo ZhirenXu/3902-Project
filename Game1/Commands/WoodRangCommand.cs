@@ -15,6 +15,8 @@ namespace Game1
 
 		public void Execute()
 		{
+			//create wood rang projectile
+
 			myGame.GetPlayer().SlotB();
 		}
 	}

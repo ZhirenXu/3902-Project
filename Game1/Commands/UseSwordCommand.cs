@@ -4,18 +4,20 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
-    class WoodSwordBeamCommand : ICommand
+    class UseSwordCommand : ICommand
     {
 		private Game1 myGame;
 
-		public WoodSwordBeamCommand(Game1 game)
+		public UseSwordCommand(Game1 game)
 		{
 			myGame = game;
 		}
 
 		public void Execute()
 		{
-			myGame.GetPlayer().SlotB();
+			//if full hearts create swordbeam projectile
+			//start sword attack animation
+			
 		}
 	}
 }
