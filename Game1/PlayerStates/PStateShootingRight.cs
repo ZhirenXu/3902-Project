@@ -4,14 +4,14 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1.PlayerStates
 {
-    class PStateArrowLeft : IPlayerState
+    class PStateShootingRight : IPlayerState
     {
         ISprite sprite;
         IPlayer player;
-        public PStateArrowLeft(IPlayer player)
+        public PStateShootingRight(IPlayer player, System.Type projectileType)
         {
             this.player = player;
-            this.sprite = SpriteFactory.Instance.GetLinkArrowLeft(player);
+            this.sprite = SpriteFactory.Instance.GetLinkShootingRight(player, projectileType);
         }
         public void MoveUp()
         {

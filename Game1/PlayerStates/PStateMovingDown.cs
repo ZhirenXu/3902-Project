@@ -9,10 +9,12 @@ namespace Game1.PlayerStates
     {
         ISprite sprite;
         IPlayer player;
-        public PStateMovingDown(IPlayer player)
+        int coolDown;
+        public PStateMovingDown(IPlayer player, int coolDown = 0)
         {
             this.player = player;
             this.sprite = SpriteFactory.Instance.GetLinkMovingDown(player);
+            this.coolDown = coolDown;
         }
         public void MoveUp()
         {
@@ -35,7 +37,10 @@ namespace Game1.PlayerStates
 
         public void SlotA()
         {
-            player.SetState(new PStateStabbingDown(player));
+            if (coolDown <= 0)
+            {
+                player.SetState(new PStateStabbingDown(player));
+            }
         }
 
         public void SlotB()
@@ -50,6 +55,10 @@ namespace Game1.PlayerStates
 
         public void Update()
         {
+            if (coolDown > 0)
+            {
+                coolDown--;
+            }
             sprite.Update();
         }
 

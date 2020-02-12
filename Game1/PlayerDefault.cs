@@ -34,7 +34,10 @@ namespace Game1
 		public void InitializeProjectiles()
 		{
 			projectiles.Add(new ProjLinkArrowDown(this));
-															//Add more projectiles here for now...
+			projectiles.Add(new ProjLinkArrowUp(this));
+			projectiles.Add(new ProjLinkArrowLeft(this));
+			projectiles.Add(new ProjLinkArrowRight(this));
+			//Add more projectiles here for now...
 		}
 		public List<IProjectile> GetProjectiles()
 		{
