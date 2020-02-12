@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\BlueCandleCommand.cs" />
     <Compile Include="EnemySprites\GelLinkIdleDown.cs" />
     <Compile Include="IProjectile.cs" />
     <Compile Include="PlayerSprites\LinkDamagedDown.cs" />
