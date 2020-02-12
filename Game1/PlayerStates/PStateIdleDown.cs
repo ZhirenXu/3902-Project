@@ -47,6 +47,7 @@ namespace Game1.PlayerStates
         public void SlotB()
         {
             player.SetState(new PStateShootingDown(player, new ProjLinkArrowDown(player).GetType()));
+            //player.inventory.slotBCommand.execute();
         }
 
         public void Stop()
