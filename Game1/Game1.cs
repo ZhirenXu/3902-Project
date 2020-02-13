@@ -19,7 +19,6 @@ namespace Game1
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
         public IPlayer GetPlayer()
@@ -32,7 +31,7 @@ namespace Game1
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteFactory.Instance.LoadAll(Content);
-            player = new PlayerDefault(100, 100, 6, 6); 
+            player = new PlayerDefault(100, 100, 6, 6, GraphicsDevice); 
             controllers = new List<IController>();           /*Controllers*/
             controllers.Add(new KeyboardController(this));
             //controllers.Add(new MouseController(this));

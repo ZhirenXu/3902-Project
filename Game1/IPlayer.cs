@@ -12,6 +12,7 @@ namespace Game1 {
         void InitializeProjectiles();
         void SetPosition(int x, int y);
         Vector2 GetPosition();
+        Vector2 GetBoundary();
         void SetState(IPlayerState state);
 
         IPlayerState GetState();

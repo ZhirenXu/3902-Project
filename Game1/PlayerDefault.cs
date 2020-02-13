@@ -10,18 +10,22 @@ namespace Game1
 	public class PlayerDefault : IPlayer
 	{
 		private Vector2 position;
+		private Vector2 Boundary;
 		private IPlayerState state;
 		List<IProjectile> projectiles;
 		int maxHealth;
 		int health;
 
-		public PlayerDefault(int x, int y, int health, int maxHealth)
+		public PlayerDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
 			this.Speed = 5;                /*Changeable*/
 			this.Size = 3;                 /************/
 			this.position = new Vector2(); 
 			this.position.X = x;
 			this.position.Y = y;
+			this.Boundary = new Vector2();
+			this.Boundary.X = window.Viewport.Width;
+			this.Boundary.Y = window.Viewport.Height;
 			this.health = health;
 			this.maxHealth = maxHealth;
 			this.state = new PStateIdleDown(this);
@@ -53,7 +57,10 @@ namespace Game1
 		{
 			return this.position;
 		}
-
+		public Vector2 GetBoundary()
+		{
+			return Boundary;
+		}
 		public void SetState(IPlayerState state)
 		{
 			this.state = state;
