@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Game1.PlayerStates;
 using Game1.Projectiles;
-/*Authors: Mike Belair, Chase Armstrong, Zhiren Xu, Xian Zhang*/
+/*Authors: Mike Belair, Chase Armstrong, Zhiren Xu, Xian Zhang, Simon Manning */
 namespace Game1
 {
     public class Game1 : Game
