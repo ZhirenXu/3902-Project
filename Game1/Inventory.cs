@@ -49,7 +49,7 @@ namespace Game1
         }
         public void SetSlotBCommand(ICommand command)
         {
-
+            slotB = command;
         }
     }
 }
