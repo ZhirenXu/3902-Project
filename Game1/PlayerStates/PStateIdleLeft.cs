@@ -46,7 +46,10 @@ namespace Game1.PlayerStates
 
         public void SlotB()
         {
-            player.GetInventory().GetSlotBCommand().Execute();
+            if (coolDown <= 0)
+            {
+                player.GetInventory().GetSlotBCommand().Execute();
+            }
         }
 
         public void Stop()

@@ -34,7 +34,7 @@ namespace Game1
             Rupees = 0;
             Keys = 0;
             Bombs = 0;
-            Arrows = 4; //set to 4 for testing purposes. will be 0 eventually
+            Arrows = 10; //set to 4 for testing purposes. will be 0 eventually
             TriforceShards = 0;
             CandleUsed = 0;
             HaveMap = 0;
