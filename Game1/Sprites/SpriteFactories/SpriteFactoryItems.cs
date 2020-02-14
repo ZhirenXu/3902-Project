@@ -29,14 +29,14 @@ namespace Game1.Sprites.SpriteFactories
 
         public void LoadAll(ContentManager content)
         {
-            arrowSheet = content.Load<Texture2D>("items/Arrow");
-            bombSheet = content.Load<Texture2D>("items/Bomb");
-            bommerangeSheet = content.Load<Texture2D>("items/Boomerang");
-            clockSheet = content.Load<Texture2D>("items/Clock");
-            heartSheet = content.Load<Texture2D>("items/Heart");
-            keySheet = content.Load<Texture2D>("items/Key");
-            rupeeSheet = content.Load<Texture2D>("items/Rupee");
-            swordSheet = content.Load<Texture2D>("items/Sword");
+            arrowSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Arrow");
+            bombSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Bomb");
+            bommerangeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
+            clockSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Clock");
+            heartSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Heart");
+            keySheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Key");
+            rupeeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Rupee");
+            swordSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Sword");
 
         }
 
