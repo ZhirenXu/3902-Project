@@ -31,7 +31,7 @@ namespace Game1.Sprites.SpriteFactories
         {
             arrowSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Arrow");
             bombSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Bomb");
-            bommerangeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
+            //bommerangeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
             clockSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Clock");
             heartSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Heart");
             keySheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Key");
@@ -40,7 +40,7 @@ namespace Game1.Sprites.SpriteFactories
 
         }
 
-        public ISprite getArrow()
+        /*public ISprite getArrow()
         {
             return new ArrowSprite(arrowSheet);
         }
@@ -48,37 +48,37 @@ namespace Game1.Sprites.SpriteFactories
         public ISprite getBomb()
         {
             return new BombSprite(bombSheet);
-        }
+        }*/
 
-        public ISprite getBoomerange()
+       /* public ISprite getBoomerange()
         {
             return new BoomerangSprite(boomerangSheet);
-        }
+        }*/
 
-        public ISprite getClock()
+       /* public ISprite getClock()
         {
             return new ClockSprite(clockSheet);
-        }
+        }*/
 
-        public ISprite getHeart()
+        /*public ISprite getHeart()
         {
             return new HeartSprite(heartSheet);
-        }
+        }*/
 
-        public ISprite getKey()
+        /*public ISprite getKey()
         {
             return new KeySprite(keySheet);
-        }
+        }*/
 
-        public ISprite getRupee()
+       /* public ISprite getRupee()
         {
             return new RupeeSprite(rupeeSheet);
-        }
+        }*/
 
-        public ISprite getSword()
+        /*public ISprite getSword()
         {
             return new SwordSprite(swordSheet);
-        }
+        }*/
 
     }
 }

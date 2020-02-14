@@ -9,11 +9,12 @@ namespace Game1.Sprites
 
         public Rectangle Dimensions { get; set; }
 
-        public itemSprite(Texture2D texture)
+        /*public ISprite itemSprite(Texture2D texture)
         {
             this.texture = texture;
             Dimensions = texture.Bounds;
-        }
+    
+        }*/
         public void Update()
         {
 
@@ -21,8 +22,8 @@ namespace Game1.Sprites
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Rectangle itemSrcDest = new Rectangle((int)location.X, (int)location.Y,texture.Width, texture.Height);
-            spriteBatch.Draw(texture, itemSrcDest, Color.White);
+           // Rectangle itemSrcDest = new Rectangle((int)location.X, (int)location.Y,texture.Width, texture.Height);
+            //spriteBatch.Draw(texture, itemSrcDest, Color.White);
         }
     }
 }
