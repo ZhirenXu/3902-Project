@@ -7,17 +7,21 @@ namespace Game1
     class BombCommand : ICommand
     {
 		private Game1 myGame;
+		private IInventory inventory;
 
 		public BombCommand(Game1 game)
 		{
 			myGame = game;
+			inventory = game.GetPlayer().GetInventory();
 		}
 
 		public void Execute()
 		{
-			//decrement bombs from inventory
-			//place bomb one tile away from link in the direction he's facing
-			myGame.GetPlayer().SlotB();
+			if (inventory.Bombs != 0)
+			{
+				inventory.Bombs--;
+				//place bomb one tile away from link in the direction he's facing
+			}
 		}
 	}
 }

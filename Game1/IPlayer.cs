@@ -14,6 +14,7 @@ namespace Game1 {
         Vector2 GetPosition();
         Vector2 GetBoundary();
         void SetState(IPlayerState state);
+        IInventory GetInventory();
 
         IPlayerState GetState();
         void MoveUp();

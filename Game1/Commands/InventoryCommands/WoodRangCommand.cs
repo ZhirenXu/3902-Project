@@ -4,20 +4,20 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
-    class BluePotionCommand : ICommand
+    class WoodRangCommand : ICommand
     {
 		private Game1 myGame;
+		private IInventory inventory;
 
-		public BluePotionCommand(Game1 game)
+		public WoodRangCommand(Game1 game)
 		{
 			myGame = game;
+			inventory = game.GetPlayer().GetInventory();
 		}
 
 		public void Execute()
 		{
-			//restore all hearts
-			//remove potion from inventory
-			myGame.GetPlayer().SlotB();
+			//create wood rang projectile
 		}
 	}
 }

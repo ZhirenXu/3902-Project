@@ -15,6 +15,7 @@ namespace Game1
 		List<IProjectile> projectiles;
 		int maxHealth;
 		int health;
+		Inventory inventory = new Inventory();
 
 		public PlayerDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
@@ -26,8 +27,6 @@ namespace Game1
 			this.Boundary = new Vector2();
 			this.Boundary.X = window.Viewport.Width;
 			this.Boundary.Y = window.Viewport.Height;
-			this.health = health;
-			this.maxHealth = maxHealth;
 			this.state = new PStateIdleDown(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
 			this.InitializeProjectiles();
@@ -47,6 +46,11 @@ namespace Game1
 		{
 			return this.projectiles;
 		}
+		public IInventory GetInventory()
+		{
+			return inventory;
+		}
+		
 		public void SetPosition(int x, int y)
 		{
 			this.position.X = x;

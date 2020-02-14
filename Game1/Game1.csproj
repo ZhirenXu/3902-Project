@@ -41,10 +41,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Commands\BlueCandleCommand.cs" />
-    <Compile Include="Commands\UseSwordCommand.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
     <Compile Include="EnemySprites\GelLinkIdleDown.cs" />
     <Compile Include="IProjectile.cs" />
+    <Compile Include="IInventory.cs" />
     <Compile Include="PlayerSprites\LinkDamagedDown.cs" />
     <Compile Include="PlayerSprites\LinkDamagedLeft.cs" />
     <Compile Include="PlayerSprites\LinkDamagedRight.cs" />
@@ -78,17 +79,17 @@
     <Compile Include="Projectiles\ProjLinkArrowUp.cs" />
     <Compile Include="Projectiles\ProjLinkArrowDown.cs" />
     <Compile Include="SpriteFactory.cs" />
-    <Compile Include="Commands\BluePotionCommand.cs" />
-    <Compile Include="Commands\BombCommand.cs" />
-    <Compile Include="Commands\BowCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\BluePotionCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\BombCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\BowCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\MoveDownCommand.cs" />
-    <Compile Include="Commands\MoveLeftCommand.cs" />
-    <Compile Include="Commands\MoveRightCommand.cs" />
-    <Compile Include="Commands\MoveUpCommand.cs" />
-    <Compile Include="Commands\SlotACommand.cs" />
-    <Compile Include="Commands\SlotBCommand.cs" />
-    <Compile Include="Commands\WoodRangCommand.cs" />
+    <Compile Include="Commands\InputCommands\MoveDownCommand.cs" />
+    <Compile Include="Commands\InputCommands\MoveLeftCommand.cs" />
+    <Compile Include="Commands\InputCommands\MoveRightCommand.cs" />
+    <Compile Include="Commands\InputCommands\MoveUpCommand.cs" />
+    <Compile Include="Commands\InputCommands\SlotACommand.cs" />
+    <Compile Include="Commands\InputCommands\SlotBCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\WoodRangCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IPlayerState.cs" />
@@ -123,6 +124,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Commands\CommandPatternDesign.txt" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>
