@@ -23,6 +23,16 @@ namespace Game1
             {
                 myGame.GetPlayer().SlotB();
             }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.D1)))
+            {
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new BowCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().SlotB();
+            }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.D2)))
+            {
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new EmptyCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().SlotB();
+            }
             else if ((Keyboard.GetState().IsKeyDown(Keys.W) || Keyboard.GetState().IsKeyDown(Keys.Up)) && !((Keyboard.GetState().IsKeyDown(Keys.S) || Keyboard.GetState().IsKeyDown(Keys.Down))))
             {
                 myGame.GetPlayer().MoveUp();
