@@ -9,11 +9,11 @@ namespace Game1 {
         int Speed { get; set; }
         int Size{ get; set;}
         List<IProjectile> GetProjectiles();
-        void InitializeProjectiles();
         void SetPosition(int x, int y);
         Vector2 GetPosition();
+        Vector2 GetBoundary(); 
         void SetState(IPlayerState state);
-
+        IInventory GetInventory();
         IPlayerState GetState();
         void MoveUp();
         void MoveDown();

@@ -11,15 +11,17 @@ namespace Game1
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
+        Rectangle backgroundSrcRec;
+        Rectangle backgroundDestRec;
         //SpriteFont text;
         List<IController> controllers;
         IPlayer player;
+        private Texture2D background;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-
         }
 
         public IPlayer GetPlayer()
@@ -32,7 +34,9 @@ namespace Game1
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteFactory.Instance.LoadAll(Content);
-            player = new PlayerDefault(100, 100, 6, 6); 
+            player = new PlayerDefault(100, 100, 6, 6, GraphicsDevice);
+            this.backgroundSrcRec = new Rectangle(257, 0, 256, 176);
+            this.backgroundDestRec = new Rectangle(0, 0, spriteBatch.GraphicsDevice.Viewport.Width, spriteBatch.GraphicsDevice.Viewport.Height);
             controllers = new List<IController>();           /*Controllers*/
             controllers.Add(new KeyboardController(this));
             //controllers.Add(new MouseController(this));
@@ -42,7 +46,7 @@ namespace Game1
 
         protected override void LoadContent()
         {
-
+            background = Content.Load<Texture2D>("ProjectSpriteSheets/dungeon");
         }
 
    
@@ -63,7 +67,10 @@ namespace Game1
 
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            spriteBatch.Begin();
+            spriteBatch.Draw(background, backgroundDestRec, backgroundSrcRec, Color.White);
+            spriteBatch.End();
+            //GraphicsDevice.Clear(Color.CornflowerBlue);
             player.Draw(spriteBatch);
             base.Draw(gameTime);
         }

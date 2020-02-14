@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Game1.Projectiles;
 
 namespace Game1.PlayerStates
 {
@@ -8,10 +9,13 @@ namespace Game1.PlayerStates
     {
         ISprite sprite;
         IPlayer player;
-        public PStateMovingUp(IPlayer player)
+        int coolDown;
+        public PStateMovingUp(IPlayer player, int coolDown = 0)
         {
             this.player = player;
             this.sprite = SpriteFactory.Instance.GetLinkMovingUp(player);
+            this.coolDown = coolDown;
+
         }
         public void MoveUp()
         {
@@ -34,12 +38,18 @@ namespace Game1.PlayerStates
 
         public void SlotA()
         {
-            player.SetState(new PStateStabbingUp(player));
+            if (coolDown <= 0)
+            {
+                player.SetState(new PStateStabbingUp(player));
+            }
         }
 
         public void SlotB()
         {
-
+            if (coolDown <= 0)
+            {
+                player.GetInventory().GetSlotBCommand().Execute();
+            }
         }
 
         public void Stop()
@@ -49,6 +59,10 @@ namespace Game1.PlayerStates
 
         public void Update()
         {
+            if (coolDown > 0)
+            {
+                coolDown--;
+            }
             sprite.Update();
         }
 

@@ -9,6 +9,7 @@ namespace Game1
     class SpriteFactory
     {
         private Texture2D linkSheet;
+        private Texture2D altLinkSheet;
         private static SpriteFactory instance = new SpriteFactory();
         public static SpriteFactory Instance
         {
@@ -24,6 +25,7 @@ namespace Game1
         public void LoadAll(ContentManager content)
         {
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
+            altLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/AltLinkSheet");
         }
 
         public ISprite GetLinkIdleDown(IPlayer player)
@@ -85,25 +87,42 @@ namespace Game1
         {
             return new LinkStabbingRight(player, linkSheet);
         }
-        public ISprite GetLinkShootingDown(IPlayer player, System.Type type)
+        public ISprite GetLinkShootingDown(IPlayer player, IProjectile projectile)
         {
-            return new LinkShootingDown(player, linkSheet, type);
+            return new LinkShootingDown(player, linkSheet, projectile);
+        }
+        public ISprite GetLinkShootingUp(IPlayer player, IProjectile projectile)
+        {
+            return new LinkShootingUp(player, linkSheet, projectile);
+        }
+        public ISprite GetLinkShootingLeft(IPlayer player, IProjectile projectile)
+        {
+            return new LinkShootingLeft(player, linkSheet, projectile);
+        }
+        public ISprite GetLinkShootingRight(IPlayer player, IProjectile projectile)
+        {
+            return new LinkShootingRight(player, linkSheet, projectile);
         }
         public ISprite GetLinkArrowDown(IProjectile projectile)
         {
             return new ArrowDown(projectile, linkSheet);
         }
-        public ISprite GetLinkArrowUp(IPlayer player)
+        public ISprite GetLinkArrowUp(IProjectile projectile)
         {
-            return new LinkArrowUp(player, linkSheet);
+            return new ArrowUp(projectile, linkSheet);
         }
-        public ISprite GetLinkArrowLeft(IPlayer player)
+        public ISprite GetLinkArrowLeft(IProjectile projectile)
         {
-            return new LinkArrowLeft(player, linkSheet);
+            return new ArrowLeft(projectile, linkSheet);
         }
-        public ISprite GetLinkArrowRight(IPlayer player)
+        public ISprite GetLinkArrowRight(IProjectile projectile)
         {
-            return new LinkArrowRight(player, linkSheet);
+            return new ArrowRight(projectile, linkSheet);
+        }
+
+        public ISprite GetLinkArrowExplode(IProjectile projectile)
+        {
+            return new ArrowExplode(projectile, altLinkSheet);
         }
         public ISprite GetLinkDamagedUp(IPlayer player)
         {

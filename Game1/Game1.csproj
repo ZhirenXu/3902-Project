@@ -41,48 +41,51 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
     <Compile Include="EnemySprites\GelLinkIdleDown.cs" />
     <Compile Include="IProjectile.cs" />
+    <Compile Include="IInventory.cs" />
     <Compile Include="PlayerSprites\LinkDamagedDown.cs" />
     <Compile Include="PlayerSprites\LinkDamagedLeft.cs" />
     <Compile Include="PlayerSprites\LinkDamagedRight.cs" />
     <Compile Include="PlayerSprites\LinkDamagedUp.cs" />
+    <Compile Include="PlayerSprites\LinkShootingLeft.cs" />
+    <Compile Include="PlayerSprites\LinkShootingRight.cs" />
+    <Compile Include="PlayerSprites\LinkShootingUp.cs" />
     <Compile Include="PlayerSprites\LinkShootingDown.cs" />
     <Compile Include="PlayerSprites\LinkStabbingRight.cs" />
     <Compile Include="PlayerSprites\LinkStabbingLeft.cs" />
     <Compile Include="PlayerSprites\LinkStabbingDown.cs" />
     <Compile Include="PlayerSprites\LinkStabbingUp.cs" />
-    <Compile Include="PlayerStates\PStateArrowRight.cs" />
-    <Compile Include="PlayerStates\PStateArrowLeft.cs" />
-    <Compile Include="PlayerStates\PStateArrowUp.cs" />
     <Compile Include="PlayerStates\PStateDamagedDown.cs" />
     <Compile Include="PlayerStates\PStateDamagedLeft.cs" />
     <Compile Include="PlayerStates\PStateDamagedRight.cs" />
     <Compile Include="PlayerStates\PStateDamagedUp.cs" />
+    <Compile Include="PlayerStates\PStateShootingRight.cs" />
+    <Compile Include="PlayerStates\PStateShootingLeft.cs" />
+    <Compile Include="PlayerStates\PStateShootingUp.cs" />
     <Compile Include="PlayerStates\PStateShootingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingRight.cs" />
     <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
     <Compile Include="PlayerStates\PStateStabbingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingUp.cs" />
+    <Compile Include="ProjectileSprites\ArrowExplode.cs" />
+    <Compile Include="ProjectileSprites\ArrowRight.cs" />
+    <Compile Include="ProjectileSprites\ArrowLeft.cs" />
+    <Compile Include="ProjectileSprites\ArrowUp.cs" />
     <Compile Include="ProjectileSprites\ArrowDown.cs" />
-    <Compile Include="ProjectileSprites\LinkArrowLeft.cs" />
-    <Compile Include="ProjectileSprites\LinkArrowRight.cs" />
-    <Compile Include="ProjectileSprites\LinkArrowUp.cs" />
+    <Compile Include="Projectiles\ProjLinkArrowRight.cs" />
+    <Compile Include="Projectiles\ProjLinkArrowLeft.cs" />
+    <Compile Include="Projectiles\ProjLinkArrowUp.cs" />
     <Compile Include="Projectiles\ProjLinkArrowDown.cs" />
     <Compile Include="SpriteFactory.cs" />
-    <Compile Include="Commands\BluePotionCommand.cs" />
-    <Compile Include="Commands\BombCommand.cs" />
-    <Compile Include="Commands\BowCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\BluePotionCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\BombCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\BowCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\MoveDownCommand.cs" />
-    <Compile Include="Commands\MoveLeftCommand.cs" />
-    <Compile Include="Commands\MoveRightCommand.cs" />
-    <Compile Include="Commands\MoveUpCommand.cs" />
-    <Compile Include="Commands\SlotACommand.cs" />
-    <Compile Include="Commands\SlotBCommand.cs" />
-    <Compile Include="Commands\WoodRangCommand.cs" />
-    <Compile Include="Commands\WoodSwordAttackCommand.cs" />
-    <Compile Include="Commands\WoodSwordBeamCommand.cs" />
+    <Compile Include="Commands\InventoryCommands\WoodRangCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IPlayerState.cs" />
@@ -117,6 +120,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Commands\CommandPatternDesign.txt" />
     <Content Include="Icon.ico" />
   </ItemGroup>
   <ItemGroup>

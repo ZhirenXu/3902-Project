@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Game1.Projectiles;
 
 namespace Game1.PlayerStates
 {
@@ -9,7 +10,6 @@ namespace Game1.PlayerStates
         ISprite sprite;
         IPlayer player;
         int coolDown;
-        int timer = 0;
         public PStateIdleLeft(IPlayer player, int coolDown = 0)
         {
             this.player = player;
@@ -18,26 +18,26 @@ namespace Game1.PlayerStates
         }
         public void MoveUp()
         {
-           player.SetState(new PStateMovingUp(player));
+           player.SetState(new PStateMovingUp(player, coolDown));
         }
 
         public void MoveDown()
         {
-            player.SetState(new PStateMovingDown(player));
+            player.SetState(new PStateMovingDown(player, coolDown));
         }
         public void MoveLeft()
         {
-            player.SetState(new PStateMovingLeft(player));
+            player.SetState(new PStateMovingLeft(player, coolDown));
         }
 
         public void MoveRight()
         {
-            player.SetState(new PStateMovingRight(player));
+            player.SetState(new PStateMovingRight(player, coolDown));
         }
 
         public void SlotA()
         {
-            if (timer >= coolDown)
+            if (coolDown <= 0)
             {
                 player.SetState(new PStateStabbingLeft(player));
             }
@@ -46,7 +46,10 @@ namespace Game1.PlayerStates
 
         public void SlotB()
         {
-
+            if (coolDown <= 0)
+            {
+                player.GetInventory().GetSlotBCommand().Execute();
+            }
         }
 
         public void Stop()
@@ -56,13 +59,9 @@ namespace Game1.PlayerStates
 
         public void Update()
         {
-            if (coolDown != 0 && timer < 200)
+            if (coolDown > 0)
             {
-                timer++;
-            }
-            else
-            {
-                timer = 999;
+                coolDown--;
             }
             sprite.Update();
             

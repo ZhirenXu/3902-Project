@@ -1,0 +1,7 @@
+﻿Command Pattern Design Decisions:
+	Two use cases for commands in this project.
+	1, input commands that can be mapped to the button of a controller.
+
+	***Not using this for now***
+	2, item use commands, instances of which can be stored in the B slot field of the inventory class.
+		These commands correspond to a effects of a single use of the B Slot by the player.

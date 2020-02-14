@@ -12,6 +12,9 @@ namespace Game1.PlayerSprites
         int srcHeight = 16;
         int destWidth = 15;
         int destHeight = 16;
+        int spriteX;
+        int spriteY;
+        int BoundaryY;
         int srcX = 0; /*Change this*/
         int srcY = 30;  /*and this*/
         int curFrame = 1;
@@ -27,6 +30,16 @@ namespace Game1.PlayerSprites
             this.destWidth *= player.Size;
             this.destHeight *= player.Size;
         }
+        public void calcPosition()
+        {
+            spriteX = (int)player.GetPosition().X;
+            spriteY = (int)player.GetPosition().Y + moveSpeed;
+            BoundaryY = (int)player.GetBoundary().Y - destHeight;
+            if (spriteY > BoundaryY)
+            {
+                spriteY = BoundaryY;
+            }
+        }
         public void Update()
         {
             delay++;
@@ -39,7 +52,8 @@ namespace Game1.PlayerSprites
                     curFrame = 1;
                 }
             }
-            player.SetPosition((int)player.GetPosition().X, (int)player.GetPosition().Y + moveSpeed); /*Change this*/
+            calcPosition();
+            player.SetPosition(spriteX, spriteY); /*Change this*/
         }
 
         public void Draw(SpriteBatch spriteBatch)

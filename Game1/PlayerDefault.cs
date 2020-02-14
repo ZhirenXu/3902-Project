@@ -10,36 +10,40 @@ namespace Game1
 	public class PlayerDefault : IPlayer
 	{
 		private Vector2 position;
+		private Vector2 Boundary;
 		private IPlayerState state;
 		List<IProjectile> projectiles;
 		int maxHealth;
 		int health;
+		IInventory inventory;
 
-		public PlayerDefault(int x, int y, int health, int maxHealth)
+		public PlayerDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
+			this.inventory = new Inventory(this);
 			this.Speed = 5;                /*Changeable*/
 			this.Size = 3;                 /************/
 			this.position = new Vector2(); 
 			this.position.X = x;
 			this.position.Y = y;
-			this.health = health;
-			this.maxHealth = maxHealth;
+			this.Boundary = new Vector2();
+			this.Boundary.X = window.Viewport.Width;
+			this.Boundary.Y = window.Viewport.Height;
 			this.state = new PStateIdleDown(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
-			this.InitializeProjectiles();
 		}
 
         public int Speed { get; set; }
 		public int Size { get; set; }
-		public void InitializeProjectiles()
-		{
-			projectiles.Add(new ProjLinkArrowDown(this));
-															//Add more projectiles here for now...
-		}
+
 		public List<IProjectile> GetProjectiles()
 		{
 			return this.projectiles;
 		}
+		public IInventory GetInventory()
+		{
+			return inventory;
+		}
+		
 		public void SetPosition(int x, int y)
 		{
 			this.position.X = x;
@@ -50,7 +54,10 @@ namespace Game1
 		{
 			return this.position;
 		}
-
+		public Vector2 GetBoundary()
+		{
+			return Boundary;
+		}
 		public void SetState(IPlayerState state)
 		{
 			this.state = state;
@@ -64,21 +71,25 @@ namespace Game1
 		public void MoveUp()
 		{
 			state.MoveUp();
+			inventory.Direction = 0;
 		}
 
 		public void MoveDown()
 		{
 			state.MoveDown();
+			inventory.Direction = 1;
 		}
 
 		public void MoveLeft()
 		{
 			state.MoveLeft();
+			inventory.Direction = 2;
 		}
 
 		public void MoveRight()
 		{
 			state.MoveRight();
+			inventory.Direction = 3;
 		}
 
 		public void SlotA()
