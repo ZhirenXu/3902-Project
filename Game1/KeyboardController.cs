@@ -15,11 +15,11 @@ namespace Game1
 
         public void Update()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Z) || Keyboard.GetState().IsKeyDown(Keys.N) || Keyboard.GetState().IsKeyDown(Keys.Space))
+            if (Keyboard.GetState().IsKeyDown(Keys.P) || Keyboard.GetState().IsKeyDown(Keys.N) || Keyboard.GetState().IsKeyDown(Keys.Space))
             {
                 myGame.GetPlayer().SlotA();
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.D1) || Keyboard.GetState().IsKeyDown(Keys.NumPad1))
+            else if (Keyboard.GetState().IsKeyDown(Keys.O) || Keyboard.GetState().IsKeyDown(Keys.NumPad1))
             {
                 myGame.GetPlayer().SlotB();
             }
