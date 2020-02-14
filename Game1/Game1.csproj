@@ -70,6 +70,7 @@
     <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
     <Compile Include="PlayerStates\PStateStabbingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingUp.cs" />
+    <Compile Include="ProjectileSprites\ArrowExplode.cs" />
     <Compile Include="ProjectileSprites\ArrowRight.cs" />
     <Compile Include="ProjectileSprites\ArrowLeft.cs" />
     <Compile Include="ProjectileSprites\ArrowUp.cs" />

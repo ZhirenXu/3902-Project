@@ -9,6 +9,7 @@ namespace Game1
     class SpriteFactory
     {
         private Texture2D linkSheet;
+        private Texture2D altLinkSheet;
         private static SpriteFactory instance = new SpriteFactory();
         public static SpriteFactory Instance
         {
@@ -24,6 +25,7 @@ namespace Game1
         public void LoadAll(ContentManager content)
         {
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
+            altLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/AltLinkSheet");
         }
 
         public ISprite GetLinkIdleDown(IPlayer player)
@@ -116,6 +118,11 @@ namespace Game1
         public ISprite GetLinkArrowRight(IProjectile projectile)
         {
             return new ArrowRight(projectile, linkSheet);
+        }
+
+        public ISprite GetLinkArrowExplode(IProjectile projectile)
+        {
+            return new ArrowExplode(projectile, altLinkSheet);
         }
         public ISprite GetLinkDamagedUp(IPlayer player)
         {

@@ -11,6 +11,7 @@ namespace Game1.Projectiles
         ISprite sprite;
         IPlayer player;
         Vector2 position;
+        int explodeTimer;
 
         public ProjLinkArrowDown(IPlayer player)
         {
@@ -38,6 +39,7 @@ namespace Game1.Projectiles
         { 
             if (!shooting)
             {
+                sprite = SpriteFactory.Instance.GetLinkArrowDown(this);
                 this.ShotDistance = 0;
                 this.position = player.GetPosition();
             }
@@ -46,9 +48,10 @@ namespace Game1.Projectiles
 
         public void Explode()
         {
+            explodeTimer = 5;
             shooting = false;
             exploding = true;
-
+            this.sprite = SpriteFactory.Instance.GetLinkArrowExplode(this);
         }
 
         public void Update()
@@ -57,7 +60,15 @@ namespace Game1.Projectiles
             {
                 Explode();
             }
-            if (shooting)
+            else if(exploding && explodeTimer > 0)
+            {
+                explodeTimer--;
+            }
+            if(explodeTimer <= 0)
+            {
+                exploding = false;
+            }
+            if (shooting || exploding)
             {
                 sprite.Update();
             }
@@ -65,7 +76,7 @@ namespace Game1.Projectiles
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (shooting)
+            if (shooting || exploding)
             {
                 sprite.Draw(spriteBatch);
             }
