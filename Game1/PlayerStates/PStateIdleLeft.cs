@@ -46,7 +46,7 @@ namespace Game1.PlayerStates
 
         public void SlotB()
         {
-            player.SetState(new PStateShootingLeft(player, new ProjLinkArrowLeft(player).GetType()));
+            player.GetInventory().GetSlotBCommand().Execute();
         }
 
         public void Stop()

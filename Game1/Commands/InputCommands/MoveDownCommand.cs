@@ -8,9 +8,14 @@ namespace Game1
     {
 		private Game1 myGame;
 
-		public MoveDownCommand(Game1 game)
+		public MoveDownCommand(IPlayer player)
 		{
-			myGame = game;
+			Initialize(player);
+		}
+
+		public void Initialize(IPlayer player)
+		{
+			this.player = player;
 		}
 
 		public void Execute()

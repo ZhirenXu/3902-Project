@@ -15,6 +15,7 @@ namespace Game1.PlayerStates
             this.player = player;
             this.sprite = SpriteFactory.Instance.GetLinkMovingDown(player);
             this.coolDown = coolDown;
+
         }
         public void MoveUp()
         {
@@ -45,7 +46,7 @@ namespace Game1.PlayerStates
 
         public void SlotB()
         {
-            player.SetState(new PStateShootingDown(player, new ProjLinkArrowDown(player).GetType()));
+            player.GetInventory().GetSlotBCommand().Execute();
         }
 
         public void Stop()

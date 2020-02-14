@@ -6,13 +6,18 @@ namespace Game1
 {
     class BluePotionCommand : ICommand
     {
-		private Game1 myGame;
+		private IPlayer player;
 		private IInventory inventory;
 
 		public BluePotionCommand(Game1 game)
 		{
-			myGame = game;
-			inventory = game.GetPlayer().GetInventory();
+			Initialize(player);
+		}
+
+		public void Initialize(IPlayer player)
+		{
+			this.player = player;
+			inventory = player.GetInventory();
 		}
 
 		public void Execute()

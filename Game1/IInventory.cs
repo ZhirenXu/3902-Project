@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework.Input;
 namespace Game1 {
     public interface IInventory
     {
+        int Direction { get; set; }
         int Health { get; set; }
         int HeartContainers { get; set; }
         int Rupees { get; set; }

@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
     <Compile Include="EnemySprites\GelLinkIdleDown.cs" />
@@ -84,12 +85,6 @@
     <Compile Include="Commands\InventoryCommands\BombCommand.cs" />
     <Compile Include="Commands\InventoryCommands\BowCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
-    <Compile Include="Commands\InputCommands\MoveDownCommand.cs" />
-    <Compile Include="Commands\InputCommands\MoveLeftCommand.cs" />
-    <Compile Include="Commands\InputCommands\MoveRightCommand.cs" />
-    <Compile Include="Commands\InputCommands\MoveUpCommand.cs" />
-    <Compile Include="Commands\InputCommands\SlotACommand.cs" />
-    <Compile Include="Commands\InputCommands\SlotBCommand.cs" />
     <Compile Include="Commands\InventoryCommands\WoodRangCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />

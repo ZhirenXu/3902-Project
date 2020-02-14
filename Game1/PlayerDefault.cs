@@ -15,10 +15,11 @@ namespace Game1
 		List<IProjectile> projectiles;
 		int maxHealth;
 		int health;
-		Inventory inventory = new Inventory();
+		IInventory inventory;
 
 		public PlayerDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
+			this.inventory = new Inventory(this);
 			this.Speed = 5;                /*Changeable*/
 			this.Size = 3;                 /************/
 			this.position = new Vector2(); 
@@ -30,6 +31,7 @@ namespace Game1
 			this.state = new PStateIdleDown(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
 			this.InitializeProjectiles();
+
 		}
 
         public int Speed { get; set; }
@@ -78,21 +80,25 @@ namespace Game1
 		public void MoveUp()
 		{
 			state.MoveUp();
+			inventory.Direction = 0;
 		}
 
 		public void MoveDown()
 		{
 			state.MoveDown();
+			inventory.Direction = 1;
 		}
 
 		public void MoveLeft()
 		{
 			state.MoveLeft();
+			inventory.Direction = 2;
 		}
 
 		public void MoveRight()
 		{
 			state.MoveRight();
+			inventory.Direction = 3;
 		}
 
 		public void SlotA()

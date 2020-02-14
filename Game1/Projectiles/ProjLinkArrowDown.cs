@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Game1.Projectiles
+namespace Game1
 {
     class ProjLinkArrowDown : IProjectile
     {

@@ -12,6 +12,7 @@ namespace Game1.PlayerStates
         {
             this.player = player;
             this.sprite = SpriteFactory.Instance.GetLinkStabbingRight(player);
+
         }
         public void MoveUp()
         {
