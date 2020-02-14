@@ -11,9 +11,15 @@ namespace Game1 {
         int Keys { get; set; }
         int Bombs { get; set; }
         int Arrows { get; set; }
-        int Map { get; set; }
-        int Compass { get; set; }
+        int TriforceShards { get; set; }
         int CandleUsed { get; set; }
+        int HaveMap { get; set; }
+        int HaveCompass { get; set; }
+        int HaveWoodRang { get; set; }
+        int HaveBlueCandle { get; set; }
+        int HaveBow { get; set; }
+        int HaveBlueRing { get; set; }
+
         ICommand GetSlotBCommand();
         void SetSlotBCommand(ICommand command);
     }
