@@ -8,10 +8,11 @@ namespace Game1.PlayerStates
     {
         ISprite sprite;
         IPlayer player;
-        public PStateShootingRight(IPlayer player, System.Type projectileType)
+        public PStateShootingRight(IPlayer player, IProjectile projectile)
         {
             this.player = player;
-            this.sprite = SpriteFactory.Instance.GetLinkShootingRight(player, projectileType);
+            this.sprite = SpriteFactory.Instance.GetLinkShootingRight(player, projectile);
+            player.GetProjectiles().Add(projectile);
 
         }
         public void MoveUp()

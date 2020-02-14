@@ -10,6 +10,7 @@ namespace Game1.PlayerSprites
     {
         Texture2D texture;
         IPlayer player;
+        IProjectile projectile;
         int linkSrcWidth = 15;
         int linkSrcHeight = 16;
         int linkDestWidth = 15;
@@ -20,15 +21,14 @@ namespace Game1.PlayerSprites
         int totalFrames = 5; /*Maybe this*/
         int delay = 0;
         int coolDown = 20;
-        System.Type projectileType;
 
-        public LinkShootingUp(IPlayer player, Texture2D texture, System.Type type)
+        public LinkShootingUp(IPlayer player, Texture2D texture, IProjectile projectile)
         {
             this.texture = texture;
             this.player = player;
             this.linkDestWidth *= player.Size;
             this.linkDestHeight *= player.Size;
-            this.projectileType = type;
+            this.projectile = projectile;
         }
         public void Update()
         {
@@ -41,7 +41,7 @@ namespace Game1.PlayerSprites
                 {
                     foreach (IProjectile projectile in player.GetProjectiles())
                     {
-                        if(projectile.GetType() == projectileType)
+                        if (projectile == this.projectile)
                         {
                             projectile.Shoot();
                         }

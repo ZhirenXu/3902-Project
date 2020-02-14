@@ -87,21 +87,21 @@ namespace Game1
         {
             return new LinkStabbingRight(player, linkSheet);
         }
-        public ISprite GetLinkShootingDown(IPlayer player, System.Type type)
+        public ISprite GetLinkShootingDown(IPlayer player, IProjectile projectile)
         {
-            return new LinkShootingDown(player, linkSheet, type);
+            return new LinkShootingDown(player, linkSheet, projectile);
         }
-        public ISprite GetLinkShootingUp(IPlayer player, System.Type type)
+        public ISprite GetLinkShootingUp(IPlayer player, IProjectile projectile)
         {
-            return new LinkShootingUp(player, linkSheet, type);
+            return new LinkShootingUp(player, linkSheet, projectile);
         }
-        public ISprite GetLinkShootingLeft(IPlayer player, System.Type type)
+        public ISprite GetLinkShootingLeft(IPlayer player, IProjectile projectile)
         {
-            return new LinkShootingLeft(player, linkSheet, type);
+            return new LinkShootingLeft(player, linkSheet, projectile);
         }
-        public ISprite GetLinkShootingRight(IPlayer player, System.Type type)
+        public ISprite GetLinkShootingRight(IPlayer player, IProjectile projectile)
         {
-            return new LinkShootingRight(player, linkSheet, type);
+            return new LinkShootingRight(player, linkSheet, projectile);
         }
         public ISprite GetLinkArrowDown(IProjectile projectile)
         {

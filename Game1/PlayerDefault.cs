@@ -30,20 +30,11 @@ namespace Game1
 			this.Boundary.Y = window.Viewport.Height;
 			this.state = new PStateIdleDown(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
-			this.InitializeProjectiles();
-
 		}
 
         public int Speed { get; set; }
 		public int Size { get; set; }
-		public void InitializeProjectiles()
-		{
-			projectiles.Add(new ProjLinkArrowDown(this));
-			projectiles.Add(new ProjLinkArrowUp(this));
-			projectiles.Add(new ProjLinkArrowLeft(this));
-			projectiles.Add(new ProjLinkArrowRight(this));
-			//Add more projectiles here for now...
-		}
+
 		public List<IProjectile> GetProjectiles()
 		{
 			return this.projectiles;

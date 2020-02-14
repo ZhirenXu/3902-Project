@@ -30,19 +30,19 @@ namespace Game1
 				switch (inventory.Direction)
 				{
 					case 0:
-						pState = new PStateShootingUp(player, new ProjLinkArrowUp(player).GetType());
+						pState = new PStateShootingUp(player, new ProjLinkArrowUp(player));
 						break; //up
 					case 1:
-						pState = new PStateShootingDown(player, new ProjLinkArrowDown(player).GetType());
+						pState = new PStateShootingDown(player, new ProjLinkArrowDown(player));
 						break; //down
 					case 2:
-						pState = new PStateShootingLeft(player, new ProjLinkArrowLeft(player).GetType());
+						pState = new PStateShootingLeft(player, new ProjLinkArrowLeft(player));
 						break; //left
 					case 3:
-						pState = new PStateShootingRight(player, new ProjLinkArrowRight(player).GetType());
+						pState = new PStateShootingRight(player, new ProjLinkArrowRight(player));
 						break; //right
 					default:
-						pState = new PStateShootingDown(player, new ProjLinkArrowDown(player).GetType());
+						pState = new PStateShootingDown(player, new ProjLinkArrowDown(player));
 						break;
 				}
 				player.SetState(pState);
