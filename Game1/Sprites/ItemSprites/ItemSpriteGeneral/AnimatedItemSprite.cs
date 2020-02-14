@@ -42,8 +42,8 @@ namespace Game1.Sprites
             int column = currentFrame % columns;
 
             Rectangle itemSrcRec = new Rectangle(width * column, height * row, width, height);
-            Rectangle itemSrcDest = new Rectangle((int)location.X, (int)location.Y, width, height);
-            spriteBatch.Draw(texture, itemSrcDest, itemSrcRec, Color.White);
+           // Rectangle itemSrcDest = new Rectangle((int)location.X, (int)location.Y, width, height);
+           // spriteBatch.Draw(texture, itemSrcDest, itemSrcRec, Color.White);
         }
     }
 }

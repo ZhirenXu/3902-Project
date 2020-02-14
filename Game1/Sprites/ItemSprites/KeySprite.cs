@@ -4,9 +4,9 @@ namespace Game1.Sprites
 {
     public class KeySprite : ItemSprite, ISprite
     {
-        public KeySprite(Texture2D texture) : base(texture)
+        /*public KeySprite(Texture2D texture) : base(texture)
         {
 
-        }
+        }*/
     }
 }
