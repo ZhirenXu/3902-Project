@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Game1.PlayerSprites;
+using Game1.EnemySprites;
 using Game1.ProjectileSprites;
 
 namespace Game1
@@ -10,6 +10,7 @@ namespace Game1
     {
         private Texture2D linkSheet;
         private Texture2D altLinkSheet;
+        private Texture2D enemyLinkSheet;
         private static SpriteFactory instance = new SpriteFactory();
         public static SpriteFactory Instance
         {
@@ -26,6 +27,7 @@ namespace Game1
         {
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
             altLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/AltLinkSheet");
+            enemyLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master");
         }
 
         public ISprite GetLinkIdleDown(IPlayer player)
@@ -139,6 +141,10 @@ namespace Game1
         public ISprite GetLinkDamagedLeft(IPlayer player)
         {
             return new LinkDamagedLeft(player, linkSheet);
+        }
+        public ISprite GetGelIdleDown(IEnemy enemy)
+        {
+            return new GelIdleDown(enemy, enemyLinkSheet);
         }
     }
 }

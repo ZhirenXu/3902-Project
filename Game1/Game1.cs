@@ -16,6 +16,7 @@ namespace Game1
         //SpriteFont text;
         List<IController> controllers;
         IPlayer player;
+        IEnemy enemy;
         private Texture2D background;
 
         public Game1()
@@ -28,13 +29,17 @@ namespace Game1
         {
             return this.player;
         }
+        public IEnemy GetEnemy()
+        {
+            return this.enemy;
+        }
 
- 
         protected override void Initialize()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteFactory.Instance.LoadAll(Content);
             player = new PlayerDefault(100, 100, 6, 6, GraphicsDevice);
+            enemy = new EnemyDefault(100, 100, 3, 6, GraphicsDevice);
             this.backgroundSrcRec = new Rectangle(257, 0, 256, 176);
             this.backgroundDestRec = new Rectangle(0, 0, spriteBatch.GraphicsDevice.Viewport.Width, spriteBatch.GraphicsDevice.Viewport.Height);
             controllers = new List<IController>();           /*Controllers*/
@@ -71,6 +76,7 @@ namespace Game1
             spriteBatch.Draw(background, backgroundDestRec, backgroundSrcRec, Color.White);
             spriteBatch.End();
             //GraphicsDevice.Clear(Color.CornflowerBlue);
+            enemy.Draw(spriteBatch);
             player.Draw(spriteBatch);
             base.Draw(gameTime);
         }

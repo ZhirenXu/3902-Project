@@ -2,25 +2,25 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace Game1.PlayerSprites
+namespace Game1.EnemySprites
 {
-    class GelLinkIdleDown :ISprite
+    class GelIdleDown :ISprite
     {
         Texture2D texture;
-        IPlayer player;
-        int srcWidth = 8;
+        IEnemy enemy;
+        int srcWidth = 7;
         int srcHeight = 16;
-        int destWidth = 8;
+        int destWidth = 7;
         int destHeight = 16;
-        int srcX = 50; /*Change this*/
-        int srcY = 50;  /*and this*/   
+        int srcX = 1; /*Change this*/
+        int srcY = 10;  /*and this*/   
 
-        public GelLinkIdleDown(IPlayer player, Texture2D texture)
+        public GelIdleDown(IEnemy enemy, Texture2D texture)
         {
             this.texture = texture;
-            this.player = player;
-            this.destWidth *= player.Size;
-            this.destHeight *= player.Size;
+            this.enemy = enemy;
+            this.destWidth *= enemy.Size;
+            this.destHeight *= enemy.Size;
         }
         public void Update()
         {
@@ -29,7 +29,7 @@ namespace Game1.PlayerSprites
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            Rectangle destRec = new Rectangle((int)player.GetPosition().X, (int)player.GetPosition().Y, destWidth, destHeight);
+            Rectangle destRec = new Rectangle((int)enemy.GetPosition().X, (int)enemy.GetPosition().Y, destWidth, destHeight);
             Rectangle srcRec;
             srcRec = new Rectangle(srcX, srcY, srcWidth, srcHeight);
             spriteBatch.Begin();
