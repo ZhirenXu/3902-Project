@@ -18,7 +18,7 @@ namespace Game1
 
 		public EnemyDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
-			this.Speed = 1;                /*Changeable*/
+			this.Speed = 3;                /*Changeable*/
 			this.Size = 3;                 /************/
 			this.position = new Vector2(); 
 			this.position.X = x;
@@ -26,7 +26,7 @@ namespace Game1
 			this.Boundary = new Vector2();
 			this.Boundary.X = window.Viewport.Width;
 			this.Boundary.Y = window.Viewport.Height;
-			this.state = new EStateGelMoving(this);
+			this.state = new EStateIdleJump(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
 		}
 

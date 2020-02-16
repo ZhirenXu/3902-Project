@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1.EnemySprites
 {
-    class GelMoving : ISprite
+    class GelMovingLeft :ISprite
     {
         Texture2D texture;
         IEnemy enemy;
@@ -18,11 +18,11 @@ namespace Game1.EnemySprites
         private int spriteY;
         private int curFrame = 1;
         private int totalFrames = 2; /*Maybe this*/
-        private int delay = 0;
+        private int delay = 0;     
         private int moveSpeed;
         private int originX;
 
-        public GelMoving(IEnemy enemy, Texture2D texture)
+        public GelMovingLeft(IEnemy enemy, Texture2D texture)
         {
             this.texture = texture;
             this.enemy = enemy;
@@ -35,20 +35,19 @@ namespace Game1.EnemySprites
         {
             spriteX = (int)enemy.GetPosition().X - moveSpeed;
             spriteY = (int)enemy.GetPosition().Y;
-            if (System.Math.Abs(originX - spriteX) > 150)
+            if(spriteX < 0)
             {
-                spriteX = (int)enemy.GetPosition().X;
-                this.moveSpeed = enemy.Speed * -1;
+                spriteX = 0;
             }
         }
         public void Update()
         {
             delay++;
-            if (delay == 7) /*Delay of frame changes*/
+            if(delay == 7) /*Delay of frame changes*/
             {
                 delay = 0;
                 curFrame++;
-                if (curFrame > totalFrames)
+                if(curFrame > totalFrames)
                 {
                     curFrame = 1;
                 }
@@ -66,7 +65,7 @@ namespace Game1.EnemySprites
                 srcX = 1;
                 srcY = 10;
             }
-            else if (curFrame == 2)
+            else if(curFrame == 2)
             {
                 srcX = 10;
                 srcY = 10;

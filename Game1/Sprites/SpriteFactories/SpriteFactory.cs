@@ -195,9 +195,5 @@ namespace Game1
         {
             return new GelIdleJump(enemy, enemyLinkSheet);
         }
-        public ISprite GetGelMoving(IEnemy enemy)
-        {
-            return new GelMoving(enemy, enemyLinkSheet);
-        }
     }
 }
