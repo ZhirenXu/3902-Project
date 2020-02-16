@@ -87,7 +87,7 @@
     <Compile Include="PlayerStates\PStateIdleDown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sprites\EnemySprites\GelIdleDown.cs" />
+    <Compile Include="Sprites\EnemySprites\GelIdleJump.cs" />
     <Compile Include="Sprites\EnemySprites\GelMovingLeft.cs" />
     <Compile Include="Sprites\EnemySprites\GelMovingRight.cs" />
     <Compile Include="Sprites\ISprite.cs" />

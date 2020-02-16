@@ -26,7 +26,7 @@ namespace Game1
 			this.Boundary = new Vector2();
 			this.Boundary.X = window.Viewport.Width;
 			this.Boundary.Y = window.Viewport.Height;
-			this.state = new EStateIdleDown(this);
+			this.state = new EStateIdleJump(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
 		}
 

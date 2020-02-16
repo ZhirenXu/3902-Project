@@ -142,9 +142,9 @@ namespace Game1
         {
             return new LinkDamagedLeft(player, linkSheet);
         }
-        public ISprite GetGelIdleDown(IEnemy enemy)
+        public ISprite GetGelIdleJump(IEnemy enemy)
         {
-            return new GelIdleDown(enemy, enemyLinkSheet);
+            return new GelIdleJump(enemy, enemyLinkSheet);
         }
     }
 }
