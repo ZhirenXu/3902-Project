@@ -8,15 +8,15 @@ namespace Game1.EnemySprites
     {
         Texture2D texture;
         IEnemy enemy;
-        int srcWidth = 8;
-        int srcHeight = 16;
-        int destWidth = 8;
-        int destHeight = 16;
-        int srcX = 1; /*Change this*/
-        int srcY = 11;  /*and this*/
-        int curFrame = 1;
-        int totalFrames = 2; /*Maybe this*/
-        int delay = 0;
+        private int srcWidth = 8;
+        private int srcHeight = 16;
+        private int destWidth = 8;
+        private int destHeight = 16;
+        private int srcX = 1; /*Change this*/
+        private int srcY = 11;  /*and this*/
+        private int curFrame = 1;
+        private int totalFrames = 2; /*Maybe this*/
+        private int delay = 0;
         public GelIdleJump(IEnemy enemy, Texture2D texture)
         {
             this.texture = texture;
