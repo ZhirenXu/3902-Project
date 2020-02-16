@@ -8,13 +8,14 @@ namespace Game1.PlayerSprites
     {
         private Texture2D texture;
         private IPlayer player;
+        private int backgroundHeight = 176;
+        private float backgroundVerticalRatio;
         private int srcWidth = 15;
         private int srcHeight = 16;
         private int destWidth = 15;
         private int destHeight = 16;
         private int spriteX;
         private int spriteY;
-        private int BoundaryY;
         private int srcX = 0; /*Change this*/
         private int srcY = 30;  /*and this*/
         private int curFrame = 1;
@@ -29,15 +30,15 @@ namespace Game1.PlayerSprites
             this.moveSpeed = player.Speed;
             this.destWidth *= player.Size;
             this.destHeight *= player.Size;
+            this.backgroundVerticalRatio = player.GetBoundary().Y / backgroundHeight;
         }
         public void calcPosition()
         {
             spriteX = (int)player.GetPosition().X;
             spriteY = (int)player.GetPosition().Y + moveSpeed;
-            BoundaryY = (int)player.GetBoundary().Y - destHeight;
-            if (spriteY > BoundaryY)
+            if (spriteY > (144 * backgroundVerticalRatio - 33))
             {
-                spriteY = BoundaryY;
+                spriteY = (int)(144 * backgroundVerticalRatio - 33);
             }
         }
         public void Update()
