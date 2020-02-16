@@ -23,6 +23,7 @@ namespace Game1
         {
         }
 
+        /*Player Sprites*/
         public void LoadAll(ContentManager content)
         {
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
@@ -32,7 +33,7 @@ namespace Game1
 
         public ISprite GetLinkIdleDown(IPlayer player)
         {
-            return new LinkIdleDown(player,linkSheet);
+            return new LinkIdleDown(player, linkSheet);
         }
 
         public ISprite GetLinkIdleUp(IPlayer player)
@@ -105,6 +106,24 @@ namespace Game1
         {
             return new LinkShootingRight(player, linkSheet, projectile);
         }
+        public ISprite GetLinkDamagedUp(IPlayer player)
+        {
+            return new LinkDamagedUp(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedDown(IPlayer player)
+        {
+            return new LinkDamagedDown(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedRight(IPlayer player)
+        {
+            return new LinkDamagedRight(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedLeft(IPlayer player)
+        {
+            return new LinkDamagedLeft(player, linkSheet);
+        }
+
+        /*Projectile Sprites*/
         public ISprite GetLinkArrowDown(IProjectile projectile)
         {
             return new ArrowDown(projectile, linkSheet);
@@ -126,25 +145,28 @@ namespace Game1
         {
             return new ArrowExplode(projectile, altLinkSheet);
         }
-        public ISprite GetLinkDamagedUp(IPlayer player)
+
+        public ISprite GetLinkSwordBeamDown(IProjectile projectile)
         {
-            return new LinkDamagedUp(player, linkSheet);
+            return new SwordBeamDown(projectile, linkSheet);
         }
-        public ISprite GetLinkDamagedDown(IPlayer player)
+
+        public ISprite GetLinkSwordBeamUp(IProjectile projectile)
         {
-            return new LinkDamagedDown(player, linkSheet);
+            return new SwordBeamUp(projectile, linkSheet);
         }
-        public ISprite GetLinkDamagedRight(IPlayer player)
+
+        public ISprite GetLinkSwordBeamLeft(IProjectile projectile)
         {
-            return new LinkDamagedRight(player, linkSheet);
+            return new SwordBeamLeft(projectile, linkSheet);
         }
-        public ISprite GetLinkDamagedLeft(IPlayer player)
+
+        public ISprite GetLinkSwordBeamRight(IProjectile projectile)
         {
-            return new LinkDamagedLeft(player, linkSheet);
+            return new SwordBeamRight(projectile, linkSheet);
         }
-        public ISprite GetGelIdleJump(IEnemy enemy)
-        {
-            return new GelIdleJump(enemy, enemyLinkSheet);
-        }
+
+        /*Enemy Sprites*/
+        
     }
 }

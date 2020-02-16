@@ -38,6 +38,7 @@ namespace Game1
             {
                 this.ShotDistance = 0;
                 this.position = player.GetPosition();
+
             }
             shooting = true;
         }
