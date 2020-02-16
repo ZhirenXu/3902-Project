@@ -143,6 +143,24 @@ namespace Game1
             return new ArrowRight(projectile, linkSheet);
         }
 
+        public ISprite GetWandWaveDown(IProjectile projectile)
+        {
+            return new WandWaveDown(projectile, altLinkSheet);
+        }
+        public ISprite GetWandWaveUp(IProjectile projectile)
+        {
+            return new WandWaveUp(projectile, altLinkSheet);
+        }
+        public ISprite GetWandWaveLeft(IProjectile projectile)
+        {
+            return new WandWaveLeft(projectile, altLinkSheet);
+        }
+        public ISprite GetWandWaveRight(IProjectile projectile)
+        {
+            return new WandWaveRight(projectile, altLinkSheet);
+        }
+
+
         public ISprite GetLinkArrowExplode(IProjectile projectile)
         {
             return new ArrowExplode(projectile, altLinkSheet);
