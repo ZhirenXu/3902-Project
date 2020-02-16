@@ -10,7 +10,7 @@ namespace Game1
     {
         public int Direction { get; set; }
         public int Health { get; set; }
-        public int HeartContainers { get; set; }
+        public int MaxHealth { get; set; }
         public int Rupees { get; set; }
         public int Keys { get; set; }
         public int Bombs { get; set; }
@@ -30,7 +30,7 @@ namespace Game1
         {
             this.player = player;
             Health = 6;
-            HeartContainers = 3;
+            MaxHealth = 6;
             Rupees = 0;
             Keys = 0;
             Bombs = 0;

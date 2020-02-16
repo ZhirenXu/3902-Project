@@ -62,6 +62,10 @@
     <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
     <Compile Include="PlayerStates\PStateStabbingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingUp.cs" />
+    <Compile Include="Projectiles\ProjLinkSwordRight.cs" />
+    <Compile Include="Projectiles\ProjLinkSwordLeft.cs" />
+    <Compile Include="Projectiles\ProjLinkSwordUp.cs" />
+    <Compile Include="Projectiles\ProjLinkSwordDown.cs" />
     <Compile Include="Projectiles\ProjLinkArrowRight.cs" />
     <Compile Include="Projectiles\ProjLinkArrowLeft.cs" />
     <Compile Include="Projectiles\ProjLinkArrowUp.cs" />
@@ -126,6 +130,10 @@
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowUp.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamRight.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamLeft.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamUp.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamDown.cs" />
     <Compile Include="Sprites\SpriteFactories\SpriteFactory.cs" />
     <Compile Include="Sprites\SpriteFactories\SpriteFactoryItems.cs" />
   </ItemGroup>

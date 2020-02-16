@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Game1",
-    "\\Game1\\EnemySprites",
-    "\\Game1\\PlayerSprites"
+    "\\Game1"
   ],
-  "SelectedNode": "\\Game1\\EnemySprites\\GelLinkIdleDown.cs",
   "PreviewInSolutionExplorer": false
 }
