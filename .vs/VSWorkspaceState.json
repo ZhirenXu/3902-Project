@@ -3,8 +3,10 @@
     "",
     "\\Game1",
     "\\Game1\\EnemySprites",
-    "\\Game1\\PlayerSprites"
+    "\\Game1\\Sprites",
+    "\\Game1\\Sprites\\EnemySprites",
+    "\\Game1\\Sprites\\ItemSprites\\ItemSpriteGeneral"
   ],
-  "SelectedNode": "\\Game1\\EnemySprites\\GelLinkIdleDown.cs",
+  "SelectedNode": "\\Game1.sln",
   "PreviewInSolutionExplorer": false
 }

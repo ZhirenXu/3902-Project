@@ -7,7 +7,7 @@ namespace Game1.Sprites.SpriteFactories
     {
         private Texture2D arrowSheet;
         private Texture2D bombSheet;
-        private Texture2D boomerangeSheet;
+        private Texture2D boomerangSheet;
         private Texture2D clockSheet;
         private Texture2D heartSheet;
         private Texture2D keySheet;
@@ -31,7 +31,7 @@ namespace Game1.Sprites.SpriteFactories
         {
             arrowSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Arrow");
             bombSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Bomb");
-            //bommerangeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
+            boomerangSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
             clockSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Clock");
             heartSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Heart");
             keySheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Key");
