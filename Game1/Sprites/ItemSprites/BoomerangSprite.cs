@@ -2,11 +2,11 @@
 
 namespace Game1.Sprites
 {
-    /*public class BoomerangSprite : ItemSprite, ISprite
+    public class BoomerangSprite : ItemSprite, ISprite
     {
        /* public BoomerangSprite(Texture2D texture) : base(texture)
         {
 
-        }
-    }*/
+        }*/
+    }
 }

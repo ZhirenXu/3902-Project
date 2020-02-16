@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Game1
 {
-    class ProjLinkWandDown : IProjectile
+    class ProjLinkBoomerangUp : IProjectile
     {
         bool shooting;
         bool exploding;
@@ -13,7 +13,7 @@ namespace Game1
         Vector2 position;
         int explodeTimer;
 
-        public ProjLinkWandDown(IPlayer player)
+        public ProjLinkBoomerangUp(IPlayer player)
         {
             shooting = false;
             exploding = false;
@@ -39,7 +39,7 @@ namespace Game1
         { 
             if (!shooting)
             {
-                sprite = SpriteFactory.Instance.GetWandWaveDown(this);
+                sprite = SpriteFactory.Instance.GetBoomerangUp(this);
                 this.ShotDistance = 0;
                 this.position = player.GetPosition();
             }

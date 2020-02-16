@@ -160,6 +160,23 @@ namespace Game1
             return new WandWaveRight(projectile, altLinkSheet);
         }
 
+        public ISprite GetBoomerangDown(IProjectile projectile)
+        {
+            return new BoomerangDown(projectile, altLinkSheet);
+        }
+        public ISprite GetBoomerangUp(IProjectile projectile)
+        {
+            return new BoomerangUp(projectile, altLinkSheet);
+        }
+        public ISprite GetBoomerangLeft(IProjectile projectile)
+        {
+            return new BoomerangLeft(projectile, altLinkSheet);
+        }
+        public ISprite GetBoomerangRight(IProjectile projectile)
+        {
+            return new BoomerangRight(projectile, altLinkSheet);
+        }
+
 
         public ISprite GetLinkArrowExplode(IProjectile projectile)
         {

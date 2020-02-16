@@ -1,41 +1,12 @@
-﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using Game1.PlayerStates;
-using System;
+﻿using Microsoft.Xna.Framework.Graphics;
 
-namespace Game1.ItemSprites
+namespace Game1.Sprites
 {
-    class ArrowSprite : ISprite
+    public class ArrowSprite: ItemSprite, ISprite
     {
-        Texture2D texture;
-        ISprite item;
-        int arrowSrcWidth = 15;
-        int arrowSrcHeight = 15;
-        int arrowDestWidth = 15;
-        int arrowDestHeight = 15;
-        int arrowSrcX = 119;
-        int arrowSrcY = 195;
-        int arrowDestX = 20;
-        int arrowDestY = 20;
-
-        public ArrowSprite(ISprite item, Texture2D texture)
-        {
-            this.texture = texture;
-            this.item = item;
-        }
-        public void Update()
+       /* public ArrowSprite(Texture2D texture) : base(texture)
         {
 
-        }
-
-        public void Draw(SpriteBatch spriteBatch)
-        {
-            Rectangle arrowSrcRec = new Rectangle(arrowSrcX, arrowSrcY, arrowSrcWidth, arrowSrcHeight);
-            Rectangle arrowDestRec = new Rectangle(arrowDestX, arrowDestY, arrowDestWidth, arrowDestHeight);
-            spriteBatch.Begin();
-            spriteBatch.Draw(texture, arrowDestRec, arrowSrcRec, Color.White);
-            spriteBatch.End();
-        }
+        }*/
     }
 }

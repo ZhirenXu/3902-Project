@@ -18,7 +18,7 @@ namespace Game1
 
 		public EnemyDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
-			this.Speed = 3;                /*Changeable*/
+			this.Speed = 5;                /*Changeable*/
 			this.Size = 3;                 /************/
 			this.position = new Vector2(); 
 			this.position.X = x;
