@@ -23,5 +23,6 @@ namespace Game1 {
 
         ICommand GetSlotBCommand();
         void SetSlotBCommand(ICommand command);
+        void Update();
     }
 }

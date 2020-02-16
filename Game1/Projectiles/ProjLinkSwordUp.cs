@@ -6,10 +6,12 @@ namespace Game1
 {
     class ProjLinkSwordUp : IProjectile
     {
+        bool exploding;
         bool shooting;
         ISprite sprite;
         IPlayer player;
         Vector2 position;
+        int explodeTimer;
 
         public ProjLinkSwordUp(IPlayer player)
         {
@@ -45,18 +47,28 @@ namespace Game1
 
         public void Explode()
         {
+            explodeTimer = 15;
+            exploding = true;
             shooting = false;
-
+            sprite = SpriteFactory.Instance.GetLinkSwordExplode(this);
         }
 
         public void Update()
         {
-            if(shooting && ShotDistance >= 300)
+            if (shooting && ShotDistance >= 300)
             {
                 Explode();
             }
-          
-            if (shooting)
+            else if (exploding)
+            {
+                explodeTimer--;
+                if (explodeTimer <= 0)
+                {
+                    exploding = false;
+                }
+            }
+
+            if (shooting || exploding)
             {
                 sprite.Update();
             }
@@ -64,7 +76,7 @@ namespace Game1
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            if (shooting)
+            if (shooting || exploding)
             {
                 sprite.Draw(spriteBatch);
             }

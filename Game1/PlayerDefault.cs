@@ -13,8 +13,6 @@ namespace Game1
 		private Vector2 Boundary;
 		private IPlayerState state;
 		List<IProjectile> projectiles;
-		int maxHealth;
-		int health;
 		IInventory inventory;
 
 		public PlayerDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
@@ -107,6 +105,12 @@ namespace Game1
 			state.Stop();
 		}
 
+		public void TakeDamage(int damage)
+		{
+			ICommand damageCommand = new TakeDamageCommand(this, damage);
+			damageCommand.Execute();
+		}
+
 		public void Update()
 		{
 			foreach (IProjectile projectile in projectiles)
@@ -114,6 +118,7 @@ namespace Game1
 				projectile.Update();
 			}
 			state.Update();
+			inventory.Update();
 		}
 
 		public void Draw(SpriteBatch spriteBatch)

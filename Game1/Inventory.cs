@@ -54,5 +54,17 @@ namespace Game1
         {
             slotB = command;
         }
+
+        public void Update()
+        {
+            if(Health > MaxHealth)
+            {
+                Health = MaxHealth;
+            }
+            else if(Health < 0)
+            {
+                Health = 0;
+            }
+        }
     }
 }

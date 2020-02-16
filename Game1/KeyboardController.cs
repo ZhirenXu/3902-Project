@@ -15,7 +15,15 @@ namespace Game1
 
         public void Update()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Z) || Keyboard.GetState().IsKeyDown(Keys.N))
+            if (Keyboard.GetState().IsKeyDown(Keys.E))
+            {
+                myGame.GetPlayer().TakeDamage(2);
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.R))
+            {
+                myGame.GetPlayer().GetInventory().Health += 2;
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Z) || Keyboard.GetState().IsKeyDown(Keys.N))
             {
                 myGame.GetPlayer().SlotA();
             }

@@ -22,6 +22,7 @@ namespace Game1 {
         void SlotA();
         void SlotB();
         void Stop();
+        void TakeDamage(int damage);
         void Update();
         void Draw(SpriteBatch spriteBatch);
 

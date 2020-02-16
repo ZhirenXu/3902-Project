@@ -168,6 +168,10 @@ namespace Game1
             return new SwordBeamRight(projectile, linkSheet);
         }
 
+        public ISprite GetLinkSwordExplode(IProjectile projectile)
+        {
+            return new SwordExplode(projectile, linkSheet);
+        }
         /*Enemy Sprites*/
         public ISprite GetGelIdleJump(IEnemy enemy)
         {

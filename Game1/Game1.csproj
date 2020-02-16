@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\InventoryCommands\TakeDamageCommand.cs" />
     <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
     <Compile Include="EnemyStates\EStateIdleJump.cs" />
     <Compile Include="Inventory.cs" />
@@ -130,6 +131,11 @@
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowUp.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordExplode.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordExplodeBotRight.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordExplodeBotLeft.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordExplodeTopRight.cs" />
+    <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordExplodeTopLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamUp.cs" />
