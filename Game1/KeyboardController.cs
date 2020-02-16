@@ -38,6 +38,11 @@ namespace Game1
             }
             else if ((Keyboard.GetState().IsKeyDown(Keys.D2)))
             {
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new WandCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().SlotB();
+            }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.D3)))
+            {
                 myGame.GetPlayer().GetInventory().SetSlotBCommand(new EmptyCommand(myGame.GetPlayer()));
                 myGame.GetPlayer().SlotB();
             }
