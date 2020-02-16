@@ -14,7 +14,7 @@ namespace Game1.PlayerSprites
         int destWidth = 15;
         int destHeight = 16;
         int srcX = 90; /*Change this*/
-        int srcY = 0;  /*and this*/
+        int srcY = 30;  /*and this*/
         int curFrame = 1;
         int totalFrame = 10;
         int coolDown = 20;
