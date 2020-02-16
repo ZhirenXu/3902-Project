@@ -15,8 +15,8 @@ namespace Game1.PlayerSprites
         private int spriteX;
         private int spriteY;
         private int BoundaryX;
-        private int srcX = 90; /*Change this*/
-        private int srcY = 0;  /*and this*/
+        private int srcX = 88; /*Change this*/
+        private int srcY = 3;  /*and this*/
         private int curFrame = 1;
         private int totalFrames = 2; /*Maybe this*/
         private int delay = 0;
@@ -62,8 +62,8 @@ namespace Game1.PlayerSprites
             Rectangle srcRec;
             if (curFrame == 1) /*Change these to correct frames, might need to add/delete else if*/
             {
-                srcX = 90;
-                srcY = 0;
+                srcX = 88;
+                srcY = 3;
             }
             else if(curFrame == 2)
             {

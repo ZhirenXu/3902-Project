@@ -13,7 +13,7 @@ namespace Game1.PlayerSprites
         private int destWidth = 15;
         private int destHeight = 16;
         private int srcX = 30; /*Change this*/
-        private int srcY = 30;  /*and this*/
+        private int srcY = 29;  /*and this*/
         private int spriteX;
         private int spriteY;
         private int curFrame = 1;
@@ -61,7 +61,7 @@ namespace Game1.PlayerSprites
             if (curFrame == 1) /*Change these to correct frames, might need to add/delete else if*/
             {
                 srcX = 30;
-                srcY = 30;
+                srcY = 29;
             }
             else if(curFrame == 2)
             {
