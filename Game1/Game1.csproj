@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
-    <Compile Include="EnemyStates\EStateIdleDown.cs" />
+    <Compile Include="EnemyStates\EStateIdleJump.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
     <Compile Include="IEnemy.cs" />

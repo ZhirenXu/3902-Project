@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Game1.PlayerSprites;
 using Game1.EnemySprites;
 using Game1.ProjectileSprites;
+using System;
 
 namespace Game1
 {
@@ -19,6 +20,7 @@ namespace Game1
                 return instance;
             }
         }
+
         private SpriteFactory()
         {
         }
@@ -167,6 +169,9 @@ namespace Game1
         }
 
         /*Enemy Sprites*/
-        
+        public ISprite GetGelIdleJump(IEnemy enemy)
+        {
+            return new GelIdleJump(enemy, enemyLinkSheet);
+        }
     }
 }

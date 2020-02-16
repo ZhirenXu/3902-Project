@@ -13,12 +13,12 @@ namespace Game1.PlayerStates
         public EStateIdleJump(IEnemy enemy, int coolDown = 0)
         {
             this.enemy = enemy;
-            //this.sprite = SpriteFactory.Instance.GetGelIdleJump(enemy);
+            this.sprite = SpriteFactory.Instance.GetGelIdleJump(enemy);
             this.coolDown = coolDown;
         }
         public void MoveUp()
         {
-           //enemy.SetState(new EStateMovingUp(enemy, coolDown));
+            //enemy.SetState(new EStateMovingUp(enemy, coolDown));
         }
 
         public void MoveDown()
@@ -50,14 +50,14 @@ namespace Game1.PlayerStates
             {
                 coolDown--;
             }
-            //sprite.Update();
+            sprite.Update();
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            //sprite.Draw(spriteBatch);
+            sprite.Draw(spriteBatch);
         }
 
-        
+
     }
 }

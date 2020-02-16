@@ -8,9 +8,9 @@ namespace Game1.EnemySprites
     {
         Texture2D texture;
         IEnemy enemy;
-        int srcWidth = 7;
+        int srcWidth = 8;
         int srcHeight = 16;
-        int destWidth = 7;
+        int destWidth = 8;
         int destHeight = 16;
         int srcX = 1; /*Change this*/
         int srcY = 10;  /*and this*/
