@@ -7,7 +7,7 @@ namespace Game1 {
     {
         int Direction { get; set; }
         int Health { get; set; }
-        int HeartContainers { get; set; }
+        int MaxHealth { get; set; }
         int Rupees { get; set; }
         int Keys { get; set; }
         int Bombs { get; set; }
@@ -23,5 +23,6 @@ namespace Game1 {
 
         ICommand GetSlotBCommand();
         void SetSlotBCommand(ICommand command);
+        void Update();
     }
 }

@@ -22,7 +22,7 @@ namespace Game1
 
 		public void Execute()
 		{
-			inventory.Health = inventory.HeartContainers;
+			inventory.Health = inventory.MaxHealth;
 			//remove potion from inventory
 		}
 	}

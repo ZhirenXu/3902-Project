@@ -6,20 +6,22 @@ namespace Game1.PlayerSprites
 {
     class LinkMovingUp :ISprite
     {
-        Texture2D texture;
-        IPlayer player;
-        int srcWidth = 15;
-        int srcHeight = 16;
-        int destWidth = 15;
-        int destHeight = 16;
-        int srcX = 60; /*Change this*/
-        int srcY = 30;  /*and this*/
-        int spriteX;
-        int spriteY;
-        int curFrame = 1;
-        int totalFrames = 2; /*Maybe this*/
-        int delay = 0;     
-        int moveSpeed;
+        private Texture2D texture;
+        private IPlayer player;
+        private int backgroundHeight = 176;
+        private float backgroundVerticalRatio;
+        private int srcWidth = 15;
+        private int srcHeight = 16;
+        private int destWidth = 15;
+        private int destHeight = 16;
+        private int srcX = 60; /*Change this*/
+        private int srcY = 30;  /*and this*/
+        private int spriteX;
+        private int spriteY;
+        private int curFrame = 1;
+        private int totalFrames = 2; /*Maybe this*/
+        private int delay = 0;
+        private int moveSpeed;
 
         public LinkMovingUp(IPlayer player, Texture2D texture)
         {
@@ -28,14 +30,15 @@ namespace Game1.PlayerSprites
             this.moveSpeed = player.Speed;
             this.destWidth *= player.Size;
             this.destHeight *= player.Size;
+            this.backgroundVerticalRatio = (int)player.GetBoundary().Y / backgroundHeight;
         }
         public void calcPosition()
         {
             spriteX = (int)player.GetPosition().X;
             spriteY = (int)player.GetPosition().Y - moveSpeed;
-            if(spriteY < 0)
+            if(spriteY < 33 * backgroundVerticalRatio)
             {
-                spriteY = 0;
+                spriteY = (int)(33 * backgroundVerticalRatio);
             }
         }
         public void Update()

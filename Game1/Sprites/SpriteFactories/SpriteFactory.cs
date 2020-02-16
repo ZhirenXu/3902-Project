@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
 using Game1.PlayerSprites;
+using Game1.EnemySprites;
 using Game1.ProjectileSprites;
+using System;
 
 namespace Game1
 {
@@ -10,6 +11,7 @@ namespace Game1
     {
         private Texture2D linkSheet;
         private Texture2D altLinkSheet;
+        private Texture2D enemyLinkSheet;
         private static SpriteFactory instance = new SpriteFactory();
         public static SpriteFactory Instance
         {
@@ -18,19 +20,22 @@ namespace Game1
                 return instance;
             }
         }
+
         private SpriteFactory()
         {
         }
 
+        /*Player Sprites*/
         public void LoadAll(ContentManager content)
         {
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
             altLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/AltLinkSheet");
+            enemyLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master");
         }
 
         public ISprite GetLinkIdleDown(IPlayer player)
         {
-            return new LinkIdleDown(player,linkSheet);
+            return new LinkIdleDown(player, linkSheet);
         }
 
         public ISprite GetLinkIdleUp(IPlayer player)
@@ -103,6 +108,24 @@ namespace Game1
         {
             return new LinkShootingRight(player, linkSheet, projectile);
         }
+        public ISprite GetLinkDamagedUp(IPlayer player)
+        {
+            return new LinkDamagedUp(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedDown(IPlayer player)
+        {
+            return new LinkDamagedDown(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedRight(IPlayer player)
+        {
+            return new LinkDamagedRight(player, linkSheet);
+        }
+        public ISprite GetLinkDamagedLeft(IPlayer player)
+        {
+            return new LinkDamagedLeft(player, linkSheet);
+        }
+
+        /*Projectile Sprites*/
         public ISprite GetLinkArrowDown(IProjectile projectile)
         {
             return new ArrowDown(projectile, linkSheet);
@@ -124,21 +147,35 @@ namespace Game1
         {
             return new ArrowExplode(projectile, altLinkSheet);
         }
-        public ISprite GetLinkDamagedUp(IPlayer player)
+
+        public ISprite GetLinkSwordBeamDown(IProjectile projectile)
         {
-            return new LinkDamagedUp(player, linkSheet);
+            return new SwordBeamDown(projectile, linkSheet);
         }
-        public ISprite GetLinkDamagedDown(IPlayer player)
+
+        public ISprite GetLinkSwordBeamUp(IProjectile projectile)
         {
-            return new LinkDamagedDown(player, linkSheet);
+            return new SwordBeamUp(projectile, linkSheet);
         }
-        public ISprite GetLinkDamagedRight(IPlayer player)
+
+        public ISprite GetLinkSwordBeamLeft(IProjectile projectile)
         {
-            return new LinkDamagedRight(player, linkSheet);
+            return new SwordBeamLeft(projectile, linkSheet);
         }
-        public ISprite GetLinkDamagedLeft(IPlayer player)
+
+        public ISprite GetLinkSwordBeamRight(IProjectile projectile)
         {
-            return new LinkDamagedLeft(player, linkSheet);
+            return new SwordBeamRight(projectile, linkSheet);
+        }
+
+        public ISprite GetLinkSwordExplode(IProjectile projectile)
+        {
+            return new SwordExplode(projectile, linkSheet);
+        }
+        /*Enemy Sprites*/
+        public ISprite GetGelIdleJump(IEnemy enemy)
+        {
+            return new GelIdleJump(enemy, enemyLinkSheet);
         }
     }
 }

@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Game1",
-    "\\Game1\\EnemySprites",
     "\\Game1\\Sprites",
     "\\Game1\\Sprites\\EnemySprites",
-    "\\Game1\\Sprites\\ItemSprites\\ItemSpriteGeneral"
+    "\\Game1\\Sprites\\SpriteFactories"
   ],
-  "SelectedNode": "\\Game1.sln",
   "PreviewInSolutionExplorer": false
 }

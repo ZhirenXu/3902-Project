@@ -6,20 +6,22 @@ namespace Game1.PlayerSprites
 {
     class LinkMovingLeft :ISprite
     {
-        Texture2D texture;
-        IPlayer player;
-        int srcWidth = 15;
-        int srcHeight = 16;
-        int destWidth = 15;
-        int destHeight = 16;
-        int srcX = 30; /*Change this*/
-        int srcY = 30;  /*and this*/
-        int spriteX;
-        int spriteY;
-        int curFrame = 1;
-        int totalFrames = 2; /*Maybe this*/
-        int delay = 0;     
-        int moveSpeed;
+        private Texture2D texture;
+        private IPlayer player;
+        private int backgroundWidth = 256;
+        private int srcWidth = 15;
+        private int srcHeight = 16;
+        private int destWidth = 15;
+        private int destHeight = 16;
+        private int srcX = 30; /*Change this*/
+        private int srcY = 29;  /*and this*/
+        private int spriteX;
+        private int spriteY;
+        private int curFrame = 1;
+        private int totalFrames = 2; /*Maybe this*/
+        private int delay = 0;
+        private int moveSpeed;
+        private float backgroundHorizontalRatio;
 
         public LinkMovingLeft(IPlayer player, Texture2D texture)
         {
@@ -28,14 +30,15 @@ namespace Game1.PlayerSprites
             this.moveSpeed = player.Speed;
             this.destWidth *= player.Size;
             this.destHeight *= player.Size;
+            this.backgroundHorizontalRatio = (int)player.GetBoundary().X / backgroundWidth;
         }
         public void calcPosition()
         {
             spriteX = (int)player.GetPosition().X - moveSpeed;
             spriteY = (int)player.GetPosition().Y;
-            if(spriteX < 0)
+            if(spriteX < (290 * backgroundHorizontalRatio - 257 * backgroundHorizontalRatio))
             {
-                spriteX = 0;
+                spriteX = (int)(290 * backgroundHorizontalRatio - 257 * backgroundHorizontalRatio);
             }
         }
         public void Update()
@@ -61,7 +64,7 @@ namespace Game1.PlayerSprites
             if (curFrame == 1) /*Change these to correct frames, might need to add/delete else if*/
             {
                 srcX = 30;
-                srcY = 30;
+                srcY = 29;
             }
             else if(curFrame == 2)
             {
