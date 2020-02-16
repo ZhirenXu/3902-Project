@@ -101,8 +101,6 @@
     <Compile Include="Sprites\ItemSprites\BoomerangSprite.cs" />
     <Compile Include="Sprites\ItemSprites\ClockSprite.cs" />
     <Compile Include="Sprites\ItemSprites\HeartSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\ItemSpriteGeneral\AnimatedItemSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\ItemSpriteGeneral\ItemSprite.cs" />
     <Compile Include="Sprites\ItemSprites\KeySprite.cs" />
     <Compile Include="Sprites\ItemSprites\RupeeSprite.cs" />
     <Compile Include="Sprites\ItemSprites\SwordSprite.cs" />
