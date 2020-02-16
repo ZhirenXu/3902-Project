@@ -5,15 +5,15 @@ using Game1.Projectiles;
 
 namespace Game1.PlayerStates
 {
-    class EStateIdleJump : IEnemyState
+    class EStateGelMoving : IEnemyState
     {
         ISprite sprite;
         IEnemy enemy;
         int coolDown;
-        public EStateIdleJump(IEnemy enemy, int coolDown = 0)
+        public EStateGelMoving(IEnemy enemy, int coolDown = 0)
         {
             this.enemy = enemy;
-            this.sprite = SpriteFactory.Instance.GetGelIdleJump(enemy);
+            this.sprite = SpriteFactory.Instance.GetGelMoving(enemy);
             this.coolDown = coolDown;
         }
         public void MoveUp()
