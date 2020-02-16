@@ -23,6 +23,7 @@ namespace Game1
         public int HaveBlueCandle { get; set; }
         public int HaveBow { get; set; }
         public int HaveBlueRing { get; set; }
+        public int HaveWand { get; set; }
         IPlayer player;
         ICommand slotB;
 
@@ -43,6 +44,7 @@ namespace Game1
             HaveBlueCandle = 0;
             HaveBow = 0;
             HaveBlueRing = 0;
+            HaveWand = 0;
             slotB = new BowCommand(player);
         }
         public ICommand GetSlotBCommand()

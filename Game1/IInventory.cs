@@ -20,7 +20,7 @@ namespace Game1 {
         int HaveBlueCandle { get; set; }
         int HaveBow { get; set; }
         int HaveBlueRing { get; set; }
-
+        int HaveWand { get; set; }
         ICommand GetSlotBCommand();
         void SetSlotBCommand(ICommand command);
         void Update();

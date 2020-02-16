@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Commands\InventoryCommands\WandCommand.cs" />
     <Compile Include="Commands\InventoryCommands\TakeDamageCommand.cs" />
     <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
     <Compile Include="EnemyStates\EStateIdleJump.cs" />
@@ -63,6 +64,10 @@
     <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
     <Compile Include="PlayerStates\PStateStabbingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingUp.cs" />
+    <Compile Include="Projectiles\ProjLinkWandRight.cs" />
+    <Compile Include="Projectiles\ProjLinkWandLeft.cs" />
+    <Compile Include="Projectiles\ProjLinkWandUp.cs" />
+    <Compile Include="Projectiles\ProjLinkWandDown.cs" />
     <Compile Include="Projectiles\ProjLinkSwordRight.cs" />
     <Compile Include="Projectiles\ProjLinkSwordLeft.cs" />
     <Compile Include="Projectiles\ProjLinkSwordUp.cs" />
@@ -140,6 +145,10 @@
     <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamUp.cs" />
     <Compile Include="Sprites\ProjectileSprites\SwordBeam\SwordBeamDown.cs" />
+    <Compile Include="Sprites\ProjectileSprites\WandWave\WandWaveRight.cs" />
+    <Compile Include="Sprites\ProjectileSprites\WandWave\WandWaveLeft.cs" />
+    <Compile Include="Sprites\ProjectileSprites\WandWave\WandWaveUp.cs" />
+    <Compile Include="Sprites\ProjectileSprites\WandWave\WandWaveDown.cs" />
     <Compile Include="Sprites\SpriteFactories\SpriteFactory.cs" />
     <Compile Include="Sprites\SpriteFactories\SpriteFactoryItems.cs" />
   </ItemGroup>
