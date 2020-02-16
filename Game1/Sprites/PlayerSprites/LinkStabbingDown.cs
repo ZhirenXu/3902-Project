@@ -46,6 +46,12 @@ namespace Game1.PlayerSprites
                 curFrame++;
                 if (curFrame > totalFrames)
                 {
+                    if(player.GetInventory().Health == player.GetInventory().MaxHealth)
+                    {
+                        IProjectile swordBeam = new ProjLinkSwordDown(player);
+                        player.GetProjectiles().Add(swordBeam);
+                        swordBeam.Shoot();
+                    }
                     player.SetState(new PStateIdleDown(player,coolDown));
                 }
             }

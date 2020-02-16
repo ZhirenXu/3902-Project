@@ -6,21 +6,21 @@ namespace Game1.PlayerSprites
 {
     class LinkMovingRight :ISprite
     {
-        Texture2D texture;
-        IPlayer player;
-        int srcWidth = 15;
-        int srcHeight = 16;
-        int destWidth = 15;
-        int destHeight = 16;
-        int spriteX;
-        int spriteY;
-        int BoundaryX;
-        int srcX = 90; /*Change this*/
-        int srcY = 0;  /*and this*/
-        int curFrame = 1;
-        int totalFrames = 2; /*Maybe this*/
-        int delay = 0;     
-        int moveSpeed;
+        private Texture2D texture;
+        private IPlayer player;
+        private int srcWidth = 15;
+        private int srcHeight = 16;
+        private int destWidth = 15;
+        private int destHeight = 16;
+        private int spriteX;
+        private int spriteY;
+        private int BoundaryX;
+        private int srcX = 88; /*Change this*/
+        private int srcY = 3;  /*and this*/
+        private int curFrame = 1;
+        private int totalFrames = 2; /*Maybe this*/
+        private int delay = 0;
+        private int moveSpeed;
 
         public LinkMovingRight(IPlayer player, Texture2D texture)
         {
@@ -62,8 +62,8 @@ namespace Game1.PlayerSprites
             Rectangle srcRec;
             if (curFrame == 1) /*Change these to correct frames, might need to add/delete else if*/
             {
-                srcX = 90;
-                srcY = 0;
+                srcX = 88;
+                srcY = 3;
             }
             else if(curFrame == 2)
             {
