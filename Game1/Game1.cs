@@ -18,7 +18,7 @@ namespace Game1
         List<IController> controllers;
         IPlayer player;
         IEnemy enemy;
-        IItem item;
+        IItems item;
         private Texture2D background;
 
         public Game1()
@@ -31,7 +31,7 @@ namespace Game1
         {
             return this.player;
         }
-        public IItem GetItem()
+        public IItems GetItem()
         {
             return this.item;
         }

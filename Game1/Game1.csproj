@@ -47,6 +47,7 @@
     <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
     <Compile Include="EnemyStates\EStateGelMovingVertical.cs" />
     <Compile Include="EnemyStates\EStateGelMovingHorizontal.cs" />
+    <Compile Include="IItems.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
     <Compile Include="IEnemy.cs" />
@@ -110,15 +111,7 @@
     <Compile Include="Sprites\EnemySprites\GelMovingVertical.cs" />
     <Compile Include="Sprites\ISprite.cs" />
     <Compile Include="Sprites\ItemSprites\ArrowSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\BombSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\BoomerangSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\ClockSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\HeartSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\ItemSpriteGeneral\AnimatedItemSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\ItemSpriteGeneral\ItemSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\KeySprite.cs" />
-    <Compile Include="Sprites\ItemSprites\RupeeSprite.cs" />
-    <Compile Include="Sprites\ItemSprites\SwordSprite.cs" />
+    <Compile Include="Sprites\ItemSprites\ItemDefault.cs" />
     <Compile Include="Sprites\PlayerSprites\LinkDamagedDown.cs" />
     <Compile Include="Sprites\PlayerSprites\LinkDamagedLeft.cs" />
     <Compile Include="Sprites\PlayerSprites\LinkDamagedRight.cs" />

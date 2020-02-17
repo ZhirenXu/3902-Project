@@ -1,18 +1,12 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace Game1.Sprites.SpriteFactories
+namespace Game1
 {
     public class SpriteFactoryItems
     {
-        private Texture2D arrowSheet;
-        private Texture2D bombSheet;
-        private Texture2D boomerangSheet;
-        private Texture2D clockSheet;
-        private Texture2D heartSheet;
-        private Texture2D keySheet;
-        private Texture2D rupeeSheet;
-        private Texture2D swordSheet;
+        private Texture2D linkSheet;
+
 
         private static SpriteFactoryItems instance = new SpriteFactoryItems();
 
@@ -29,27 +23,19 @@ namespace Game1.Sprites.SpriteFactories
 
         public void LoadAll(ContentManager content)
         {
-            arrowSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Arrow");
-            bombSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Bomb");
-            boomerangSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
-            clockSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Clock");
-            heartSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Heart");
-            keySheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Key");
-            rupeeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Rupee");
-            swordSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Sword");
-
+            linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
         }
 
-        /*public ISprite getArrow()
+        public ISprite getArrow(IItems item)
         {
-            return new ArrowSprite(arrowSheet);
+            return new ArrowSprite(item,linkSheet);
         }
-
+        /*
         public ISprite getBomb()
         {
             return new BombSprite(bombSheet);
-        }*/
-
+        }
+        */
        /* public ISprite getBoomerange()
         {
             return new BoomerangSprite(boomerangSheet);
