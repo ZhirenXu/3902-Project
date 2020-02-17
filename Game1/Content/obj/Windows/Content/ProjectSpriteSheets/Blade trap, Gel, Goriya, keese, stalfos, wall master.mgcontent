@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/User/source/repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master.png</SourceFile>
+  <SourceFile>C:/Users/User/Source/Repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master.png</SourceFile>
   <SourceTime>2020-02-16T13:54:13.1447239-05:00</SourceTime>
-  <DestFile>C:/Users/User/source/repos/Belair34/3902-Project/Game1/Content/bin/Windows/Content/ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master.xnb</DestFile>
-  <DestTime>2020-02-16T14:28:41.3716925-05:00</DestTime>
+  <DestFile>C:/Users/User/Source/Repos/Belair34/3902-Project/Game1/Content/bin/Windows/Content/ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master.xnb</DestFile>
+  <DestTime>2020-02-17T02:36:40.8933974-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
