@@ -9,6 +9,7 @@ namespace Game1
 {
     public class Game1 : Game
     {
+        //THis is Simon first comment on git
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Rectangle backgroundSrcRec;
