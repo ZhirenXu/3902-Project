@@ -2,11 +2,11 @@
 
 namespace Game1.Sprites
 {
-    /*public class RupeeSprite : ItemSprite, ISprite
+    public class RupeeSprite : ItemSprite, ISprite
     {
        /* public RupeeSprite(Texture2D texture) : base(texture)
         {
 
-        }
-    }*/
+        }*/
+    }
 }

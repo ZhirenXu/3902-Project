@@ -43,6 +43,16 @@ namespace Game1
             }
             else if ((Keyboard.GetState().IsKeyDown(Keys.D3)))
             {
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new BoomerangCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().SlotB();
+            }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.D4)))
+            {
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new BombCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().SlotB();
+            }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.D5)))
+            {
                 myGame.GetPlayer().GetInventory().SetSlotBCommand(new EmptyCommand(myGame.GetPlayer()));
                 myGame.GetPlayer().SlotB();
             }
@@ -61,6 +71,14 @@ namespace Game1
             else if ((Keyboard.GetState().IsKeyDown(Keys.D) || Keyboard.GetState().IsKeyDown(Keys.Right)) && !((Keyboard.GetState().IsKeyDown(Keys.A) || Keyboard.GetState().IsKeyDown(Keys.Left))))
             {
                 myGame.GetPlayer().MoveRight();
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.O))
+            {
+                
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.P))
+            {
+
             }
             else
             {

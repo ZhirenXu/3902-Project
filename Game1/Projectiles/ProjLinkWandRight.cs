@@ -20,7 +20,7 @@ namespace Game1
             this.player = player;
             this.Size = player.Size;
             this.position = new Vector2(0);
-            this.Speed = 10; /*Changeable */
+            this.Speed = 5; /*Changeable */
             sprite = SpriteFactory.Instance.GetWandWaveRight(this);
         }
         public int Size { get; set; }

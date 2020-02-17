@@ -8,19 +8,18 @@ namespace Game1.EnemySprites
     {
         Texture2D texture;
         IEnemy enemy;
-        private int srcWidth = 8;
-        private int srcHeight = 16;
-        private int destWidth = 8;
-        private int destHeight = 16;
-        private int srcX = 1; /*Change this*/
-        private int srcY = 10;  /*and this*/
-        private int spriteX;
-        private int spriteY;
-        private int curFrame = 1;
-        private int totalFrames = 2; /*Maybe this*/
-        private int delay = 0;     
-        private int moveSpeed;
-        private int originX;
+        int srcWidth = 8;
+        int srcHeight = 16;
+        int destWidth = 8;
+        int destHeight = 16;
+        int srcX = 1; /*Change this*/
+        int srcY = 10;  /*and this*/
+        int spriteX;
+        int spriteY;
+        int curFrame = 1;
+        int totalFrames = 2; /*Maybe this*/
+        int delay = 0;     
+        int moveSpeed;
 
         public GelMovingLeft(IEnemy enemy, Texture2D texture)
         {
@@ -29,7 +28,6 @@ namespace Game1.EnemySprites
             this.moveSpeed = enemy.Speed;
             this.destWidth *= enemy.Size;
             this.destHeight *= enemy.Size;
-            originX = (int)enemy.GetPosition().X;
         }
         public void calcPosition()
         {

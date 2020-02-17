@@ -18,7 +18,7 @@ namespace Game1
 
 		public EnemyDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
-			this.Speed = 3;                /*Changeable*/
+			this.Speed = 1;                /*Changeable*/
 			this.Size = 3;                 /************/
 			this.position = new Vector2(); 
 			this.position.X = x;
@@ -26,7 +26,7 @@ namespace Game1
 			this.Boundary = new Vector2();
 			this.Boundary.X = window.Viewport.Width;
 			this.Boundary.Y = window.Viewport.Height;
-			this.state = new EStateIdleJump(this);
+			this.state = new EStateGelMovingVertical(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
 		}
 
@@ -80,10 +80,20 @@ namespace Game1
 		{
 			state.MoveRight();
 		}
+		public void MoveHorizontal()
+		{
+			state.MoveHorizontal();
+		}
+
+		public void MoveVertical()
+		{
+			state.MoveVertical();
+		}
 		public void MoveToPlayer()
 		{
 			state.MoveToPlayer();
 		}
+
 		public void Stop()
 		{
 			state.Stop();
@@ -106,5 +116,7 @@ namespace Game1
 			}
 			state.Draw(spriteBatch);
 		}
+
+		
 	}
 }

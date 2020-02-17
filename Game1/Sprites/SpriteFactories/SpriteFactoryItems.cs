@@ -1,16 +1,21 @@
 ﻿using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Game1.PlayerSprites;
-using Game1.EnemySprites;
-using Game1.ProjectileSprites;
-using System;
 
-namespace Game1.ItemSprites
+namespace Game1.Sprites.SpriteFactories
 {
-    class SpriteFactoryItems
+    public class SpriteFactoryItems
     {
-        private Texture2D linkSheet;
+        private Texture2D arrowSheet;
+        private Texture2D bombSheet;
+        private Texture2D boomerangSheet;
+        private Texture2D clockSheet;
+        private Texture2D heartSheet;
+        private Texture2D keySheet;
+        private Texture2D rupeeSheet;
+        private Texture2D swordSheet;
+
         private static SpriteFactoryItems instance = new SpriteFactoryItems();
+
         public static SpriteFactoryItems Instance
         {
             get
@@ -18,21 +23,62 @@ namespace Game1.ItemSprites
                 return instance;
             }
         }
-
         private SpriteFactoryItems()
         {
         }
 
         public void LoadAll(ContentManager content)
         {
-            linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
+            arrowSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Arrow");
+            bombSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Bomb");
+            boomerangSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Boomerang");
+            clockSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Clock");
+            heartSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Heart");
+            keySheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Key");
+            rupeeSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Rupee");
+            swordSheet = content.Load<Texture2D>("ProjectSpriteSheets/items/Sword");
 
         }
 
-        public ISprite GetArrowSprite(IItem item)
+        /*public ISprite getArrow()
         {
-            return new ArrowSprite(item,linkSheet);
+            return new ArrowSprite(arrowSheet);
         }
+
+        public ISprite getBomb()
+        {
+            return new BombSprite(bombSheet);
+        }*/
+
+       /* public ISprite getBoomerange()
+        {
+            return new BoomerangSprite(boomerangSheet);
+        }*/
+
+       /* public ISprite getClock()
+        {
+            return new ClockSprite(clockSheet);
+        }*/
+
+        /*public ISprite getHeart()
+        {
+            return new HeartSprite(heartSheet);
+        }*/
+
+        /*public ISprite getKey()
+        {
+            return new KeySprite(keySheet);
+        }*/
+
+       /* public ISprite getRupee()
+        {
+            return new RupeeSprite(rupeeSheet);
+        }*/
+
+        /*public ISprite getSword()
+        {
+            return new SwordSprite(swordSheet);
+        }*/
 
     }
 }
