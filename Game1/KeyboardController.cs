@@ -43,7 +43,7 @@ namespace Game1
             }
             else if ((Keyboard.GetState().IsKeyDown(Keys.D3)))
             {
-                myGame.GetPlayer().GetInventory().SetSlotBCommand(new WoodRangCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new BoomerangCommand(myGame.GetPlayer()));
                 myGame.GetPlayer().SlotB();
             }
             else if ((Keyboard.GetState().IsKeyDown(Keys.D4)))
