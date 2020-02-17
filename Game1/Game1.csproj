@@ -87,6 +87,7 @@
     <Compile Include="Commands\InventoryCommands\BombCommand.cs" />
     <Compile Include="Commands\InventoryCommands\BowCommand.cs" />
     <Compile Include="Commands\ICommand.cs" />
+    <Compile Include="Commands\InventoryCommands\WoodRangCommand.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="IController.cs" />
     <Compile Include="IPlayerState.cs" />
@@ -105,8 +106,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sprites\EnemySprites\GelIdleJump.cs" />
     <Compile Include="Sprites\EnemySprites\GelMovingHorizontal.cs" />
-    <Compile Include="Sprites\EnemySprites\GelMovingLeft.cs" />
-    <Compile Include="Sprites\EnemySprites\GelMovingRight.cs" />
     <Compile Include="Sprites\EnemySprites\GelMovingVertical.cs" />
     <Compile Include="Sprites\ISprite.cs" />
     <Compile Include="Sprites\ItemSprites\ArrowSprite.cs" />

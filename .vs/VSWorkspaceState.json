@@ -2,10 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\Game1",
-    "\\Game1\\Commands\\InventoryCommands",
+    "\\Game1\\Sprites",
     "\\Game1\\Sprites\\EnemySprites",
     "\\Game1\\Sprites\\SpriteFactories"
   ],
-  "SelectedNode": "\\Game1\\obj",
   "PreviewInSolutionExplorer": false
 }
