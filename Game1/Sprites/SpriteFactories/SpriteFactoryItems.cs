@@ -29,7 +29,7 @@ namespace Game1.ItemSprites
 
         }
 
-        public ISprite GetArrowSprite(ISprite item)
+        public ISprite GetArrowSprite(IItem item)
         {
             return new ArrowSprite(item,linkSheet);
         }

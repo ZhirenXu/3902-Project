@@ -41,6 +41,8 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="IItem.cs" />
+    <Compile Include="ItemDefault.cs" />
     <Compile Include="Commands\InventoryCommands\WandCommand.cs" />
     <Compile Include="Commands\InventoryCommands\TakeDamageCommand.cs" />
     <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />

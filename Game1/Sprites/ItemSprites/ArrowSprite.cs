@@ -9,20 +9,22 @@ namespace Game1.ItemSprites
     class ArrowSprite : ISprite
     {
         Texture2D texture;
-        ISprite item;
+        IItem item;
         int arrowSrcWidth = 15;
         int arrowSrcHeight = 15;
+
         int arrowDestWidth = 15;
         int arrowDestHeight = 15;
+
         int arrowSrcX = 119;
         int arrowSrcY = 195;
-        int arrowDestX = 20;
-        int arrowDestY = 20;
 
-        public ArrowSprite(ISprite item, Texture2D texture)
+        public ArrowSprite(IItem item, Texture2D texture)
         {
             this.texture = texture;
             this.item = item;
+            this.arrowDestHeight *= item.Size;
+            this.arrowDestWidth *= item.Size;
         }
         public void Update()
         {
@@ -32,7 +34,7 @@ namespace Game1.ItemSprites
         public void Draw(SpriteBatch spriteBatch)
         {
             Rectangle arrowSrcRec = new Rectangle(arrowSrcX, arrowSrcY, arrowSrcWidth, arrowSrcHeight);
-            Rectangle arrowDestRec = new Rectangle(arrowDestX, arrowDestY, arrowDestWidth, arrowDestHeight);
+            Rectangle arrowDestRec = new Rectangle((int)item.GetPosition().X, (int)item.GetPosition().Y, arrowDestWidth, arrowDestHeight);
             spriteBatch.Begin();
             spriteBatch.Draw(texture, arrowDestRec, arrowSrcRec, Color.White);
             spriteBatch.End();
