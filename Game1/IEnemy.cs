@@ -16,11 +16,9 @@ namespace Game1
         void SetState(IEnemyState state);
 
         IEnemyState GetState();
-        void MoveUp();
+        void MoveHorizontal();
         void MoveDown();
-        void MoveLeft();
-        void MoveRight();
-        void MoveToPlayer();
+        void MoveVertical();
         void Stop();
         void Update();
         void Draw(SpriteBatch spriteBatch);

@@ -10,6 +10,8 @@ namespace Game1
         void MoveDown();
         void MoveLeft();
         void MoveRight();
+        void MoveHorizontal();
+        void MoveVertical();
         void MoveToPlayer();
         void Stop();
         void Update();

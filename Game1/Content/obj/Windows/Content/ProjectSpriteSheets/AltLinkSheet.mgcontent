@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/crazy/Source/Repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/AltLinkSheet.png</SourceFile>
-  <SourceTime>2020-02-16T11:49:48.73296-05:00</SourceTime>
-  <DestFile>C:/Users/crazy/Source/Repos/Belair34/3902-Project/Game1/Content/bin/Windows/Content/ProjectSpriteSheets/AltLinkSheet.xnb</DestFile>
-  <DestTime>2020-02-16T12:25:24.2778219-05:00</DestTime>
+  <SourceFile>C:/Users/Zhiren Xu/Source/Repos/Belair34/3902-Project/Game1/Content/ProjectSpriteSheets/AltLinkSheet.png</SourceFile>
+  <SourceTime>2020-02-14T12:54:08.3243492-05:00</SourceTime>
+  <DestFile>C:/Users/Zhiren Xu/Source/Repos/Belair34/3902-Project/Game1/Content/bin/Windows/Content/ProjectSpriteSheets/AltLinkSheet.xnb</DestFile>
+  <DestTime>2020-02-16T18:18:52.2271922-05:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T11:35:54-05:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

@@ -212,5 +212,13 @@ namespace Game1
         {
             return new GelIdleJump(enemy, enemyLinkSheet);
         }
+        public ISprite GetGelMovingVertical(IEnemy enemy)
+        {
+            return new GelMovingVertical(enemy, enemyLinkSheet);
+        }
+        public ISprite GetGelMovingHorizontal(IEnemy enemy)
+        {
+            return new GelMovingHorizontal(enemy, enemyLinkSheet);
+        }
     }
 }
