@@ -48,6 +48,11 @@ namespace Game1
             }
             else if ((Keyboard.GetState().IsKeyDown(Keys.D4)))
             {
+                myGame.GetPlayer().GetInventory().SetSlotBCommand(new BombCommand(myGame.GetPlayer()));
+                myGame.GetPlayer().SlotB();
+            }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.D5)))
+            {
                 myGame.GetPlayer().GetInventory().SetSlotBCommand(new EmptyCommand(myGame.GetPlayer()));
                 myGame.GetPlayer().SlotB();
             }

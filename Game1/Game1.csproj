@@ -66,6 +66,7 @@
     <Compile Include="PlayerStates\PStateStabbingLeft.cs" />
     <Compile Include="PlayerStates\PStateStabbingDown.cs" />
     <Compile Include="PlayerStates\PStateStabbingUp.cs" />
+    <Compile Include="Projectiles\ProjLinkBombDown.cs" />
     <Compile Include="Projectiles\ProjLinkBoomerangeUp.cs" />
     <Compile Include="Projectiles\ProjLinkBoomerangLeft.cs" />
     <Compile Include="Projectiles\ProjLinkBoomerangRight.cs" />
@@ -142,6 +143,8 @@
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowUp.cs" />
+    <Compile Include="Sprites\ProjectileSprites\Bomb\BombExplode.cs" />
+    <Compile Include="Sprites\ProjectileSprites\Bomb\BombDown.cs" />
     <Compile Include="Sprites\ProjectileSprites\Boomerang\BoomerangRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\Boomerang\BoomerangLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\Boomerang\BoomerangUp.cs" />

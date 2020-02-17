@@ -12,6 +12,7 @@ namespace Game1
         private Texture2D linkSheet;
         private Texture2D altLinkSheet;
         private Texture2D enemyLinkSheet;
+        private Texture2D explosionSheet;
         private static SpriteFactory instance = new SpriteFactory();
         public static SpriteFactory Instance
         {
@@ -31,6 +32,7 @@ namespace Game1
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
             altLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/AltLinkSheet");
             enemyLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/Blade trap, Gel, Goriya, keese, stalfos, wall master");
+            //explosionSheet = content.Load<Texture2D>("ProjectSpriteSheets/");
         }
 
         public ISprite GetLinkIdleDown(IPlayer player)
@@ -207,6 +209,16 @@ namespace Game1
         {
             return new SwordExplode(projectile, linkSheet);
         }
+
+        public ISprite GetLinkBombDown(IProjectile projectile)
+        {
+            return new BombDown(projectile, linkSheet);
+        }
+        public ISprite GetLinkBombExplode(IProjectile projectile)
+        {
+            return new BombExplode(projectile, explosionSheet);
+        }
+
         /*Enemy Sprites*/
         public ISprite GetGelIdleJump(IEnemy enemy)
         {
