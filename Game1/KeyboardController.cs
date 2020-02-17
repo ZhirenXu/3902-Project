@@ -67,6 +67,14 @@ namespace Game1
             {
                 myGame.GetPlayer().MoveRight();
             }
+            else if (Keyboard.GetState().IsKeyDown(Keys.O))
+            {
+                
+            }
+            else if (Keyboard.GetState().IsKeyDown(Keys.P))
+            {
+
+            }
             else
             {
                 myGame.GetPlayer().Stop();
