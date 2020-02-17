@@ -9,7 +9,7 @@ namespace Game1
 		private IPlayer player;
 		private IInventory inventory;
 
-		public WoodRangCommand(Game1 game)
+		public WoodRangCommand(IPlayer player)
 		{
 			Initialize(player);
 		}
