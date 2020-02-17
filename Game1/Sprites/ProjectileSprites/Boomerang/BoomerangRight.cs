@@ -30,7 +30,6 @@ namespace Game1.ProjectileSprites
         }
         public void Update()
         {
-            rotation += MathHelper.ToRadians(velocity);
             int projX = (int)projectile.GetPosition().X;
             int projY = (int)projectile.GetPosition().Y;
             projX += speed;
@@ -39,7 +38,8 @@ namespace Game1.ProjectileSprites
         }
 
         public void Draw(SpriteBatch spriteBatch)
-        { 
+        {
+            rotation += MathHelper.ToRadians(velocity);
             Rectangle boomSrcRec = new Rectangle(boomSrcX, boomSrcY, boomSrcWidth, boomSrcHeight);
             Rectangle boomDestRec = new Rectangle((int)projectile.GetPosition().X+20, (int)projectile.GetPosition().Y+25, boomDestWidth, boomDestHeight);
             spriteBatch.Begin();

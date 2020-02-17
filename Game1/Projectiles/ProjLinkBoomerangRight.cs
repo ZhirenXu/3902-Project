@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System;
 
 namespace Game1
 {
@@ -11,7 +12,7 @@ namespace Game1
         ISprite sprite;
         IPlayer player;
         Vector2 position;
-        int explodeTimer;
+        int tolerance;
 
         public ProjLinkBoomerangRight(IPlayer player)
         {
@@ -20,7 +21,8 @@ namespace Game1
             this.player = player;
             this.Size = player.Size;
             this.position = new Vector2(0);
-            this.Speed = 5; /*Changeable */
+            this.Speed = 7; /*Changeable */
+            this.tolerance = 5;
             sprite = SpriteFactory.Instance.GetBoomerangRight(this);
         }
         public int Size { get; set; }
@@ -48,27 +50,34 @@ namespace Game1
 
         public void Explode()
         {
-          
+            shooting = false;
+            exploding = true;
         }
 
         public void Update()
         {
             if(shooting && ShotDistance >= 300)
             {
+
                 Explode();
             }
-            else if(exploding && explodeTimer > 0)
+            else if (exploding && (position.X >= player.GetPosition().X + tolerance || position.X <= player.GetPosition().X - tolerance || position.Y >= player.GetPosition().Y + tolerance || position.Y <= player.GetPosition().Y - tolerance))
             {
-                explodeTimer--;
+                Vector2 movementVector = new Vector2(player.GetPosition().X - position.X, player.GetPosition().Y - position.Y);
+                movementVector.Normalize();
+                position.X += movementVector.X*Speed;
+                position.Y += movementVector.Y*Speed;
             }
-            if(explodeTimer <= 0)
+            else if(position.X >= player.GetPosition().X - tolerance && position.X <= player.GetPosition().X + tolerance && position.Y >= player.GetPosition().Y - tolerance && position.Y <= player.GetPosition().Y + tolerance)
             {
                 exploding = false;
             }
-            if (shooting || exploding)
+
+            if (shooting)
             {
                 sprite.Update();
             }
+            
         }
 
         public void Draw(SpriteBatch spriteBatch)
