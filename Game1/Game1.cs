@@ -48,6 +48,10 @@ namespace Game1
             return this.enemy;
         }
 
+        public void Reset()
+        {
+            Initialize();
+        }
         protected override void Initialize()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
