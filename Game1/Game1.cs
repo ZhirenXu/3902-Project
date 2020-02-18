@@ -39,7 +39,7 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteFactory.Instance.LoadAll(Content);
             player = new PlayerDefault(100, 100, 6, 6, GraphicsDevice);
-            enemy = new Gel(600, 300, 3, 6, GraphicsDevice);
+            enemy = new BladeTrap(600, 300, 3, 6, GraphicsDevice);
             this.backgroundSrcRec = new Rectangle(257, 0, 256, 176);
             this.backgroundDestRec = new Rectangle(0, 0, spriteBatch.GraphicsDevice.Viewport.Width, spriteBatch.GraphicsDevice.Viewport.Height);
             controllers = new List<IController>();           /*Controllers*/
