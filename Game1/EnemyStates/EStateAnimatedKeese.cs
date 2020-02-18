@@ -1,19 +1,19 @@
-﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Game1.Projectiles;
 
 namespace Game1.PlayerStates
 {
-    class EStateGelMovingVertical : IEnemyState
+    class EStateAnimatedKeese : IEnemyState
     {
         ISprite sprite;
         IEnemy enemy;
         int coolDown;
-        public EStateGelMovingVertical(IEnemy enemy, int coolDown = 0)
+        public EStateAnimatedKeese(IEnemy enemy, int coolDown = 0)
         {
             this.enemy = enemy;
-            this.sprite = SpriteFactory.Instance.GetGelMovingVertical(enemy);
+            this.sprite = SpriteFactory.Instance.GetGelIdleJump(enemy);
             this.coolDown = coolDown;
         }
         public void MoveUp()
@@ -33,14 +33,6 @@ namespace Game1.PlayerStates
         public void MoveRight()
         {
             //enemy.SetState(new EStateMovingRight(enemy, coolDown));
-        }
-        public void MoveHorizontal()
-        {
-        }
-
-        public void MoveVertical()
-        {
-            enemy.SetState(new EStateGelMovingVertical(enemy, coolDown));
         }
         public void MoveToPlayer()
         {

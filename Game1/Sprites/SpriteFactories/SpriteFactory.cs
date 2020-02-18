@@ -232,5 +232,33 @@ namespace Game1
         {
             return new GelMovingHorizontal(enemy, enemyLinkSheet);
         }
+        public ISprite GetAnimatedKeese(IEnemy enemy)
+        {
+            return new AnimatedKeese(enemy, enemyLinkSheet);
+        }
+        public ISprite GetAnimatedWallMaster(IEnemy enemy)
+        {
+            return new AnimatedWallMaster(enemy, enemyLinkSheet);
+        }
+        public ISprite GetBladeTrapSprites(IEnemy enemy)
+        {
+            return new BladeTrapSprites(enemy, enemyLinkSheet);
+        }
+        public ISprite GetGoriyaDown(IEnemy enemy)
+        {
+            return new GoriyaDown(enemy, enemyLinkSheet);
+        }
+        public ISprite GetGoriyaRight(IEnemy enemy)
+        {
+            return new GoriyaRight(enemy, enemyLinkSheet);
+        }
+        public ISprite GetGoriyaThrowRight(IEnemy enemy)
+        {
+            return new GoriyaThrowRight(enemy, enemyLinkSheet);
+        }
+        public ISprite GetGoriyaUp(IEnemy enemy)
+        {
+            return new GoriyaUp(enemy, enemyLinkSheet);
+        }
     }
 }
