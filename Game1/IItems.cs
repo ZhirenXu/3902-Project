@@ -5,10 +5,9 @@ using System.Collections.Generic;
 
 namespace Game1
 {
-    public interface IItem
+    public interface IItems
     {
         int Size { get; set; }
-        List<IItem> GetItems();
         void SetPosition(int x, int y);
         Vector2 GetPosition();
         Vector2 GetBoundary();

@@ -7,13 +7,13 @@ using System.Collections.Generic;
 
 namespace Game1
 {
-    public class ItemDefault : IItem
+    public class ArrowItem : IItems
     {
         private Vector2 position;
         private Vector2 Boundary;
-        List<IItem> items;
+        ISprite sprite;
 
-        public ItemDefault(int x, int y, GraphicsDevice window)
+        public ArrowItem(int x, int y, GraphicsDevice window)
         {           
             /*Changeable*/
             this.Size = 3;      
@@ -21,20 +21,16 @@ namespace Game1
             this.position = new Vector2();
             this.position.X = x;
             this.position.Y = y;
+            this.sprite = SpriteFactoryItems.Instance.GetArrow(this);
 
             this.Boundary = new Vector2();
             this.Boundary.X = window.Viewport.Width;
             this.Boundary.Y = window.Viewport.Height;
-
-            items = new List<IItem>();           /*Items*/
+             /*Items*/
         }
 
         public int Size { get; set; }
 
-        public List<IItem> GetItems()
-        {
-            return this.items;
-        }
         public void SetPosition(int x, int y)
         {
             this.position.X = x;
@@ -55,18 +51,14 @@ namespace Game1
         }
         public void Update()
         {
-            foreach (IItem item in items)
-            {
-                item.Update();
-            }
+                sprite.Update();
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            foreach (IItem item in items)
-            {
-                item.Draw(spriteBatch);
-            }
+
+            sprite.Draw(spriteBatch);
         }
     }
 }
