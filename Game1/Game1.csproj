@@ -42,7 +42,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="EnemyStates\EStateGoriyaDown.cs" />
-    <Compile Include="Goriya.cs" />
+    <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Commands\InventoryCommands\BoomerangCommand.cs" />
     <Compile Include="Commands\InventoryCommands\WandCommand.cs" />
     <Compile Include="Commands\InventoryCommands\TakeDamageCommand.cs" />
@@ -50,10 +50,10 @@
     <Compile Include="EnemyStates\EStateGelMovingVertical.cs" />
     <Compile Include="EnemyStates\EStateBladeTrap.cs" />
     <Compile Include="EnemyStates\EStateWallMasterIdleAnimated.cs" />
-    <Compile Include="BladeTrap.cs" />
-    <Compile Include="WallMaster.cs" />
-    <Compile Include="Keese.cs" />
-    <Compile Include="Gel.cs" />
+    <Compile Include="Enemies\BladeTrap.cs" />
+    <Compile Include="Enemies\WallMaster.cs" />
+    <Compile Include="Enemies\Keese.cs" />
+    <Compile Include="Enemies\Gel.cs" />
     <Compile Include="EnemyStates\EStateKeeseIdleAnimated.cs" />
     <Compile Include="EnemyStates\EStateGelMovingHorizontal.cs" />
     <Compile Include="IItems.cs" />

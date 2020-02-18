@@ -91,14 +91,22 @@ namespace Game1
             {
                 myGame.GetPlayer().MoveRight();
             }
-            else if (Keyboard.GetState().IsKeyDown(Keys.O))
+            else if ((Keyboard.GetState().IsKeyDown(Keys.O)) && delay <= 0) 
             {
-                
-                
-            }
-            else if (Keyboard.GetState().IsKeyDown(Keys.P))
-            {
+                delay = 20;
+                if (myGame.enemies1.Count > 1)
+                {
+                    myGame.enemies2.Push(myGame.enemies1.Pop());
+                }
 
+            }
+            else if ((Keyboard.GetState().IsKeyDown(Keys.P)) && delay <= 0)
+            {
+                delay = 20;
+                if (myGame.enemies2.Count > 0)
+                {
+                    myGame.enemies1.Push(myGame.enemies2.Pop());
+                }
             }
             else
             {

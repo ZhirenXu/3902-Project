@@ -21,9 +21,11 @@ namespace Game1
         IEnemy enemy;
         IItems item;
         private Texture2D background;
-        
+
 
         //change this more efficiently maybe?
+        public Stack<IEnemy> enemies1;
+        public Stack<IEnemy> enemies2;
 
 
         public Game1()
@@ -52,7 +54,7 @@ namespace Game1
             SpriteFactory.Instance.LoadAll(Content);
             SpriteFactoryItems.Instance.LoadAll(Content);
             player = new PlayerDefault(100, 100, 6, 6, GraphicsDevice);
-            enemy = new BladeTrap(600, 300, 3, 6, GraphicsDevice);
+            //enemy = new BladeTrap(600, 300, 3, 6, GraphicsDevice);
             this.backgroundSrcRec = new Rectangle(257, 0, 256, 176);
             this.backgroundDestRec = new Rectangle(0, 0, spriteBatch.GraphicsDevice.Viewport.Width, spriteBatch.GraphicsDevice.Viewport.Height);
             controllers = new List<IController>();           /*Controllers*/
@@ -73,6 +75,17 @@ namespace Game1
             items1.Push(new MapItem(150, 150, GraphicsDevice));
             //get first item on stack
             item = items1.Peek();
+
+            //enemy push
+            enemies1 = new Stack<IEnemy>();
+            enemies2 = new Stack<IEnemy>();
+            enemies1.Push(new BladeTrap(600, 300, 3, 6, GraphicsDevice));
+            enemies1.Push(new Gel(600, 300, 3, 6, GraphicsDevice));
+            enemies1.Push(new Keese(600, 300, 3, 6, GraphicsDevice));
+            enemies1.Push(new WallMaster(600, 300, 3, 6, GraphicsDevice));
+            enemies1.Push(new Goriya(600, 300, 3, 6, GraphicsDevice));
+
+            enemy = enemies1.Peek();
 
             //controllers.Add(new MouseController(this));
             this.IsMouseVisible = true;
@@ -97,7 +110,15 @@ namespace Game1
                 controller.Update();
             }
             player.Update();
+
+            //enemy
+            if (enemies1.Count > 0)
+            {
+                enemy = enemies1.Peek();
+            }
             enemy.Update();
+
+            //item
             if(items1.Count > 0)
             {
                 item = items1.Peek();
