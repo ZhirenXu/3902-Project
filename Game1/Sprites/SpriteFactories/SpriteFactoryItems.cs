@@ -6,9 +6,10 @@ namespace Game1
     public class SpriteFactoryItems
     {
         private Texture2D linkSheet;
+        private Texture2D altLinkSheet;
 
 
-        private static SpriteFactoryItems instance = new SpriteFactoryItems();
+        public static SpriteFactoryItems instance = new SpriteFactoryItems();
 
         public static SpriteFactoryItems Instance
         {
@@ -24,47 +25,59 @@ namespace Game1
         public void LoadAll(ContentManager content)
         {
             linkSheet = content.Load<Texture2D>("ProjectSpriteSheets/LinkSpriteSheet");
+            altLinkSheet = content.Load<Texture2D>("ProjectSpriteSheets/AltLinkSheet");
         }
 
-        public ISprite getArrow(IItems item)
+        public ISprite GetArrow(IItems item)
         {
             return new ArrowSprite(item,linkSheet);
         }
-        /*
-        public ISprite getBomb()
+        
+        public ISprite GetBomb(IItems item)
         {
-            return new BombSprite(bombSheet);
+            return new BombSprite(item,linkSheet);
         }
-        */
-       /* public ISprite getBoomerange()
+        
+        public ISprite GetBoomerang(IItems item)
         {
-            return new BoomerangSprite(boomerangSheet);
-        }*/
+            return new BoomerangSprite(item,altLinkSheet);
+        }
 
-       /* public ISprite getClock()
+        public ISprite GetBow(IItems item)
         {
-            return new ClockSprite(clockSheet);
-        }*/
+            return new BowSprite(item, linkSheet);
+        }
 
-        /*public ISprite getHeart()
+        public ISprite GetClock(IItems item)
         {
-            return new HeartSprite(heartSheet);
-        }*/
+            return new ClockSprite(item, linkSheet);
+        }
+        public ISprite GetHeart(IItems item)
+        {
+            return new HeartSprite(item, linkSheet);
+        }
 
-        /*public ISprite getKey()
+        public ISprite GetKey(IItems item)
         {
-            return new KeySprite(keySheet);
-        }*/
+            return new KeySprite(item,linkSheet);
+        }
 
-       /* public ISprite getRupee()
+        public ISprite GetRupee(IItems item)
         {
-            return new RupeeSprite(rupeeSheet);
-        }*/
-
-        /*public ISprite getSword()
+            return new RupeeSprite(item,linkSheet);
+        }
+        public ISprite GetFlashingRupee(IItems item)
         {
-            return new SwordSprite(swordSheet);
-        }*/
+            return new FlashingRupeeSprite(item, linkSheet);
+        }
+        public ISprite GetMap(IItems item)
+        {
+            return new MapSprite(item, linkSheet);
+        }
+        public ISprite GetSword(IItems item)
+        {
+            return new SwordSprite(item, linkSheet);
+        }
 
     }
 }

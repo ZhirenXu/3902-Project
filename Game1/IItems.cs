@@ -8,7 +8,6 @@ namespace Game1
     public interface IItems
     {
         int Size { get; set; }
-        List<IItems> GetItems();
         void SetPosition(int x, int y);
         Vector2 GetPosition();
         Vector2 GetBoundary();
