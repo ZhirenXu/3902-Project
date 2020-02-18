@@ -104,9 +104,17 @@
     <Compile Include="PlayerStates\PStateIdleDown.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sprites\EnemySprites\AnimatedKeese.cs" />
+    <Compile Include="Sprites\EnemySprites\AnimatedWallMaster.cs" />
+    <Compile Include="Sprites\EnemySprites\BladeTrapSprites.cs" />
     <Compile Include="Sprites\EnemySprites\GelIdleJump.cs" />
     <Compile Include="Sprites\EnemySprites\GelMovingHorizontal.cs" />
     <Compile Include="Sprites\EnemySprites\GelMovingVertical.cs" />
+    <Compile Include="Sprites\EnemySprites\GoriyaDown.cs" />
+    <Compile Include="Sprites\EnemySprites\GoriyaLeft.cs" />
+    <Compile Include="Sprites\EnemySprites\GoriyaRight.cs" />
+    <Compile Include="Sprites\EnemySprites\GoriyaThrowRight.cs" />
+    <Compile Include="Sprites\EnemySprites\GoriyaUp.cs" />
     <Compile Include="Sprites\ISprite.cs" />
     <Compile Include="Sprites\ItemSprites\ArrowSprite.cs" />
     <Compile Include="Sprites\ItemSprites\BombSprite.cs" />
