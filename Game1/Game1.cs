@@ -9,7 +9,6 @@ namespace Game1
 {
     public class Game1 : Game
     {
-        //THis is Simon
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
         Rectangle backgroundSrcRec;
@@ -18,7 +17,6 @@ namespace Game1
         List<IController> controllers;
         IPlayer player;
         IEnemy enemy;
-        IItems item;
         private Texture2D background;
 
         public Game1()
@@ -31,10 +29,6 @@ namespace Game1
         {
             return this.player;
         }
-        public IItems GetItem()
-        {
-            return this.item;
-        }
         public IEnemy GetEnemy()
         {
             return this.enemy;
@@ -46,7 +40,6 @@ namespace Game1
             SpriteFactory.Instance.LoadAll(Content);
             player = new PlayerDefault(100, 100, 6, 6, GraphicsDevice);
             enemy = new EnemyDefault(600, 300, 3, 6, GraphicsDevice);
-            item = new ItemDefault(600, 200, GraphicsDevice);
             this.backgroundSrcRec = new Rectangle(257, 0, 256, 176);
             this.backgroundDestRec = new Rectangle(0, 0, spriteBatch.GraphicsDevice.Viewport.Width, spriteBatch.GraphicsDevice.Viewport.Height);
             controllers = new List<IController>();           /*Controllers*/
@@ -75,7 +68,6 @@ namespace Game1
             }
             player.Update();
             enemy.Update();
-            item.Update();
             base.Update(gameTime);
         }
 
@@ -87,7 +79,6 @@ namespace Game1
             //GraphicsDevice.Clear(Color.CornflowerBlue);
             enemy.Draw(spriteBatch);
             player.Draw(spriteBatch);
-            item.Draw(spriteBatch);
             base.Draw(gameTime);
         }
     }
