@@ -7,6 +7,7 @@ namespace Game1
 {
     public interface IEnemy
     {
+        
         int Speed { get; set; }
         int Size { get; set; }
         List<IProjectile> GetProjectiles();

@@ -74,6 +74,7 @@ namespace Game1
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.O))
             {
+                myGame.GetEnemy().enemies[0];
                 
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.P))

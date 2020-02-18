@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 using Game1.PlayerStates;
 using Game1.Projectiles;
-/*Authors: Mike Belair, Chase Armstrong, Zhiren Xu, Xian Zhang, Simon Manning */
+/*Authors: Mike Belair, Chase Armstrong, Zhiren Xu, Xian Zhang, Simon Manning, Yunseong Lee */
 namespace Game1
 {
     public class Game1 : Game
@@ -19,6 +19,10 @@ namespace Game1
         IEnemy enemy;
         private Texture2D background;
 
+        //change this more efficiently maybe?
+        string[] enemies = new string[] {"Gel", "Keese", "WallMaster", "BladeTrap", "Goriya"};
+        int index = 0;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
@@ -31,6 +35,7 @@ namespace Game1
         }
         public IEnemy GetEnemy()
         {
+
             return this.enemy;
         }
 
