@@ -20,8 +20,7 @@ namespace Game1
         private Texture2D background;
 
         //change this more efficiently maybe?
-        string[] enemies = new string[] {"Gel", "Keese", "WallMaster", "BladeTrap", "Goriya"};
-        int index = 0;
+
 
         public Game1()
         {
