@@ -41,13 +41,20 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="EnemyStates\EStateGoriyaDown.cs" />
+    <Compile Include="Goriya.cs" />
     <Compile Include="Commands\InventoryCommands\BoomerangCommand.cs" />
     <Compile Include="Commands\InventoryCommands\WandCommand.cs" />
     <Compile Include="Commands\InventoryCommands\TakeDamageCommand.cs" />
     <Compile Include="Commands\InventoryCommands\EmptyCommand.cs" />
+    <Compile Include="EnemyStates\EStateGelMovingVertical.cs" />
+    <Compile Include="EnemyStates\EStateBladeTrap.cs" />
+    <Compile Include="EnemyStates\EStateWallMasterIdleAnimated.cs" />
+    <Compile Include="BladeTrap.cs" />
+    <Compile Include="WallMaster.cs" />
     <Compile Include="Keese.cs" />
     <Compile Include="Gel.cs" />
-    <Compile Include="EnemyStates\EStateGelMovingVertical.cs" />
+    <Compile Include="EnemyStates\EStateKeeseIdleAnimated.cs" />
     <Compile Include="EnemyStates\EStateGelMovingHorizontal.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />

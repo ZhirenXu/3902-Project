@@ -36,12 +36,11 @@ namespace Game1.PlayerStates
         }
         public void MoveHorizontal()
         {
-            enemy.SetState(new EStateGelMovingHorizontal(enemy, coolDown));
         }
 
         public void MoveVertical()
         {
-            
+            enemy.SetState(new EStateGelMovingVertical(enemy, coolDown));
         }
         public void MoveToPlayer()
         {
