@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Game1
 {
-	public class Keese : IEnemy
+	public class BladeTrap : IEnemy
 	{
 		private Vector2 position;
 		private Vector2 Boundary;
@@ -16,7 +16,7 @@ namespace Game1
 		int maxHealth;
 		int health;
 
-		public Keese(int x, int y, int health, int maxHealth, GraphicsDevice window)
+		public BladeTrap(int x, int y, int health, int maxHealth, GraphicsDevice window)
 		{
 			this.Speed = 1;                /*Changeable*/
 			this.Size = 3;                 /************/
@@ -26,7 +26,7 @@ namespace Game1
 			this.Boundary = new Vector2();
 			this.Boundary.X = window.Viewport.Width;
 			this.Boundary.Y = window.Viewport.Height;
-			this.state = new EStateKeeseIdleAnimated(this);
+			this.state = new EStateBladeTrap(this);
 			projectiles = new List<IProjectile>();           /*Projectiles*/
 		}
 

@@ -5,15 +5,15 @@ using Game1.Projectiles;
 
 namespace Game1.PlayerStates
 {
-    class EStateGelMovingVertical : IEnemyState
+    class EStateGoriyaDown : IEnemyState
     {
         ISprite sprite;
         IEnemy enemy;
         int coolDown;
-        public EStateGelMovingVertical(IEnemy enemy, int coolDown = 0)
+        public EStateGoriyaDown(IEnemy enemy, int coolDown = 0)
         {
             this.enemy = enemy;
-            this.sprite = SpriteFactory.Instance.GetGelMovingVertical(enemy);
+            this.sprite = SpriteFactory.Instance.GetGoriyaDown(enemy);
             this.coolDown = coolDown;
         }
         public void MoveUp()
@@ -23,7 +23,7 @@ namespace Game1.PlayerStates
 
         public void MoveDown()
         {
-            //enemy.SetState(new EStateMovingDown(enemy, coolDown));
+            enemy.SetState(new EStateGoriyaDown(enemy, coolDown));
         }
         public void MoveLeft()
         {
@@ -36,11 +36,12 @@ namespace Game1.PlayerStates
         }
         public void MoveHorizontal()
         {
+            
         }
 
         public void MoveVertical()
         {
-            enemy.SetState(new EStateGelMovingVertical(enemy, coolDown));
+            
         }
         public void MoveToPlayer()
         {
