@@ -21,9 +21,13 @@ namespace Game1
             {
                 myGame.GetPlayer().TakeDamage(2);
             }
+            else if (Keyboard.GetState().IsKeyDown(Keys.Q))
+            {
+                myGame.Exit();
+            }
             else if (Keyboard.GetState().IsKeyDown(Keys.R))
             {
-                myGame.GetPlayer().GetInventory().Health += 2;
+                myGame.Reset();
             }
             else if (Keyboard.GetState().IsKeyDown(Keys.Z) || Keyboard.GetState().IsKeyDown(Keys.N))
             {
