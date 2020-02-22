@@ -74,6 +74,9 @@
     <Compile Include="Items\KeyItem.cs" />
     <Compile Include="Items\FlashingRupeeItem.cs" />
     <Compile Include="Items\RupeeItem.cs" />
+    <Compile Include="Projectiles\ProjLinkBombRight.cs" />
+    <Compile Include="Projectiles\ProjLinkBombLeft.cs" />
+    <Compile Include="Projectiles\ProjLinkBombUp.cs" />
     <Compile Include="Sprites\ItemSprites\BowSprite.cs" />
     <Compile Include="Sprites\ItemSprites\SwordSprite.cs" />
     <Compile Include="Sprites\ItemSprites\MapSprite.cs" />
@@ -173,8 +176,8 @@
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\Arrow\ArrowUp.cs" />
+    <Compile Include="Sprites\ProjectileSprites\Bomb\Bomb.cs" />
     <Compile Include="Sprites\ProjectileSprites\Bomb\BombExplode.cs" />
-    <Compile Include="Sprites\ProjectileSprites\Bomb\BombDown.cs" />
     <Compile Include="Sprites\ProjectileSprites\Boomerang\BoomerangRight.cs" />
     <Compile Include="Sprites\ProjectileSprites\Boomerang\BoomerangLeft.cs" />
     <Compile Include="Sprites\ProjectileSprites\Boomerang\BoomerangUp.cs" />
