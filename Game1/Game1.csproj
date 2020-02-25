@@ -57,6 +57,7 @@
     <Compile Include="EnemyStates\EStateKeeseIdleAnimated.cs" />
     <Compile Include="EnemyStates\EStateGelMovingHorizontal.cs" />
     <Compile Include="Interfaces\IItems.cs" />
+    <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />

@@ -9,8 +9,8 @@ namespace Game1
 {
 	public class PlayerDefault : IPlayer
 	{
+		public Rectangle hitBox;
 		private Vector2 position;
-		private Vector2 Boundary;
 		private IPlayerState state;
 		List<IProjectile> projectiles;
 		IInventory inventory;
@@ -23,11 +23,10 @@ namespace Game1
 			this.position = new Vector2(); 
 			this.position.X = x;
 			this.position.Y = y;
-			this.Boundary = new Vector2();
-			this.Boundary.X = window.Viewport.Width;
-			this.Boundary.Y = window.Viewport.Height;
 			this.state = new PStateIdleDown(this);
-			projectiles = new List<IProjectile>();           /*Projectiles*/
+			projectiles = new List<IProjectile>();
+			this.hitBox = new Rectangle(x, y, 15*Size, 15*Size);
+
 		}
 
         public int Speed { get; set; }
@@ -51,10 +50,6 @@ namespace Game1
 		public Vector2 GetPosition()
 		{
 			return this.position;
-		}
-		public Vector2 GetBoundary()
-		{
-			return Boundary;
 		}
 		public void SetState(IPlayerState state)
 		{
@@ -118,6 +113,7 @@ namespace Game1
 				projectile.Update();
 			}
 			state.Update();
+			this.hitBox.Location = this.position.ToPoint();
 			inventory.Update();
 		}
 

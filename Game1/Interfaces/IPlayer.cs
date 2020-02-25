@@ -11,7 +11,6 @@ namespace Game1 {
         List<IProjectile> GetProjectiles();
         void SetPosition(int x, int y);
         Vector2 GetPosition();
-        Vector2 GetBoundary(); 
         void SetState(IPlayerState state);
         IInventory GetInventory();
         IPlayerState GetState();
