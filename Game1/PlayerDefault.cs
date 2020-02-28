@@ -15,22 +15,25 @@ namespace Game1
 		List<IProjectile> projectiles;
 		IInventory inventory;
 
-		public PlayerDefault(int x, int y, int health, int maxHealth, GraphicsDevice window)
+		public PlayerDefault(int x, int y, int health, int maxHealth)
 		{
 			this.inventory = new Inventory(this);
 			this.Speed = 5;                /*Changeable*/
 			this.Size = 3;                 /************/
-			this.position = new Vector2(); 
+			this.position = new Vector2();
 			this.position.X = x;
 			this.position.Y = y;
 			this.state = new PStateIdleDown(this);
 			projectiles = new List<IProjectile>();
-			this.hitBox = new Rectangle(x, y, 15*Size, 15*Size);
-
+			this.hitBox = new Rectangle(x, y, 15 * Size, 15 * Size);
 		}
 
-        public int Speed { get; set; }
+		public int Speed { get; set; }
 		public int Size { get; set; }
+		public Rectangle GetHitBox()
+		{
+			return this.hitBox;
+		}
 
 		public List<IProjectile> GetProjectiles()
 		{
@@ -105,7 +108,36 @@ namespace Game1
 			ICommand damageCommand = new TakeDamageCommand(this, damage);
 			damageCommand.Execute();
 		}
+		
+		public void CheckCollisions(ICollidable collidable, Border border)
+		{
 
+		}
+
+		public void PlayerCollision(ICollidable collidable)
+		{
+
+		}
+
+		public void EnemyCollision(ICollidable collidable)
+		{
+
+		}
+
+		public void ProjectileCollision(ICollidable collidable)
+		{
+
+		}
+
+		public void BlockCollision(ICollidable collidable)
+		{
+
+		}
+
+		public void BorderCollision()
+		{
+
+		}
 		public void Update()
 		{
 			foreach (IProjectile projectile in projectiles)

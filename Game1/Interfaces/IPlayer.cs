@@ -4,12 +4,12 @@ using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
 namespace Game1 {
-    public interface IPlayer
+    public interface IPlayer : ICollidable
     {
         int Speed { get; set; }
         int Size{ get; set;}
         List<IProjectile> GetProjectiles();
-        void SetPosition(int x, int y);
+        
         Vector2 GetPosition();
         void SetState(IPlayerState state);
         IInventory GetInventory();
