@@ -14,8 +14,9 @@ namespace Game1
 		private IPlayerState state;
 		List<IProjectile> projectiles;
 		IInventory inventory;
+		Texture2D block;
 
-		public PlayerDefault(int x, int y, int health, int maxHealth)
+		public PlayerDefault(int x, int y, int health, int maxHealth, Texture2D box)
 		{
 			this.inventory = new Inventory(this);
 			this.Speed = 5;                /*Changeable*/
@@ -25,7 +26,8 @@ namespace Game1
 			this.position.Y = y;
 			this.state = new PStateIdleDown(this);
 			projectiles = new List<IProjectile>();
-			this.hitBox = new Rectangle(x, y, 15 * Size, 15 * Size);
+			this.hitBox = new Rectangle(x, y, 15 * Size, 16 * Size);
+			block = box;
 		}
 
 		public int Speed { get; set; }
@@ -151,11 +153,15 @@ namespace Game1
 
 		public void Draw(SpriteBatch spriteBatch)
 		{
+			Rectangle src = new Rectangle(0, 0, 50, 50);
 			foreach (IProjectile projectile in projectiles)
 			{
 				projectile.Draw(spriteBatch);
 			}
 			state.Draw(spriteBatch);
+			spriteBatch.Begin();
+			spriteBatch.Draw(block, hitBox, src, Color.White);
+			spriteBatch.End();
 		}
 
 

@@ -57,8 +57,9 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
             SpriteFactory.Instance.LoadAll(Content);
             SpriteFactoryItems.Instance.LoadAll(Content);
-            border = new Border(graphics);
-            player = new PlayerDefault(100, 100, 6, 6);
+            background = Content.Load<Texture2D>("ProjectSpriteSheets/dungeon");
+            border = new Border(graphics, background);
+            player = new PlayerDefault(100, 100, 6, 6, background);
             //enemy = new BladeTrap(600, 300, 3, 6, GraphicsDevice);
             this.backgroundSrcRec = new Rectangle(257, 0, 256, 176);
             this.backgroundDestRec = new Rectangle(0, 0, spriteBatch.GraphicsDevice.Viewport.Width, spriteBatch.GraphicsDevice.Viewport.Height);
@@ -99,7 +100,7 @@ namespace Game1
 
         protected override void LoadContent()
         {
-            background = Content.Load<Texture2D>("ProjectSpriteSheets/dungeon");
+            
         }
 
    
@@ -114,6 +115,7 @@ namespace Game1
             {
                 controller.Update();
             }
+            
             player.Update();
             border.CheckCollision(player);
             //enemy
@@ -140,8 +142,10 @@ namespace Game1
             //GraphicsDevice.Clear(Color.CornflowerBlue);
             enemy.Draw(spriteBatch);
             item.Draw(spriteBatch);
+            border.DrawBox(spriteBatch);
             player.Draw(spriteBatch);
             base.Draw(gameTime);
+            
         }
     }
 }
