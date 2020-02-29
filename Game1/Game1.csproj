@@ -41,6 +41,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Border.cs" />
     <Compile Include="EnemyStates\EStateGoriyaDown.cs" />
     <Compile Include="Enemies\Goriya.cs" />
     <Compile Include="Commands\InventoryCommands\BoomerangCommand.cs" />
@@ -56,13 +57,14 @@
     <Compile Include="Enemies\Gel.cs" />
     <Compile Include="EnemyStates\EStateKeeseIdleAnimated.cs" />
     <Compile Include="EnemyStates\EStateGelMovingHorizontal.cs" />
-    <Compile Include="IItems.cs" />
+    <Compile Include="Interfaces\IItems.cs" />
+    <Compile Include="Interfaces\ICollidable.cs" />
     <Compile Include="Inventory.cs" />
     <Compile Include="Commands\InventoryCommands\BlueCandleCommand.cs" />
-    <Compile Include="IEnemy.cs" />
-    <Compile Include="IEnemyState.cs" />
-    <Compile Include="IProjectile.cs" />
-    <Compile Include="IInventory.cs" />
+    <Compile Include="Interfaces\IEnemy.cs" />
+    <Compile Include="Interfaces\IEnemyState.cs" />
+    <Compile Include="Interfaces\IProjectile.cs" />
+    <Compile Include="Interfaces\IInventory.cs" />
     <Compile Include="EnemyDefault.cs" />
     <Compile Include="Items\BombItem.cs" />
     <Compile Include="Items\BoomerangItem.cs" />
@@ -120,9 +122,9 @@
     <Compile Include="Commands\ICommand.cs" />
     <Compile Include="Commands\InventoryCommands\WoodRangCommand.cs" />
     <Compile Include="Game1.cs" />
-    <Compile Include="IController.cs" />
-    <Compile Include="IPlayerState.cs" />
-    <Compile Include="IPlayer.cs" />
+    <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="Interfaces\IPlayerState.cs" />
+    <Compile Include="Interfaces\IPlayer.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerDefault.cs" />
     <Compile Include="PlayerStates\PStateIdleRight.cs" />
